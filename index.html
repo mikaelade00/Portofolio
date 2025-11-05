@@ -88,19 +88,57 @@
   </style>
 </head>
 <script>
-function openProject(title, desc, link) {
-  document.getElementById("modal-title").innerText = title;
-  document.getElementById("modal-description").innerText = desc;
-  document.getElementById("modal-link").href = link;
-  document.getElementById("project-modal").style.display = "block";
+function openProject(title, description, link) {
+  document.getElementById("projectTitle").innerText = title;
+  document.getElementById("projectDesc").innerText = description;
+  document.getElementById("projectLink").href = link;
+  document.getElementById("projectModal").style.display = "block";
 }
 
-document.querySelector(".close").onclick = function() {
-  document.getElementById("project-modal").style.display = "none";
-};
+function closeProject() {
+  document.getElementById("projectModal").style.display = "none";
+}
+
+// Tutup popup kalau klik di luar modal
+window.onclick = function(e) {
+  let modal = document.getElementById("projectModal");
+  if (e.target == modal) modal.style.display = "none";
+}
 </script>
 
 <body>
+  <div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProject()">&times;</span>
+    <h2 id="projectTitle"></h2>
+    <p id="projectDesc"></p>
+    <a id="projectLink" href="#" target="_blank">Visit Project</a>
+  </div>
+</div>
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 50%;
+  margin: 10% auto;
+  border-radius: 8px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+</style>
   <header>
     <h1>Mikael Ade Krisna Respati</h1>
     <p>AI Engineer / Machine Learning Researcher</p>
@@ -158,5 +196,24 @@ document.querySelector(".close").onclick = function() {
   <footer>
     <p>&copy; 2025 Mikael Ade Krisna Respati. All rights reserved.</p>
   </footer>
+  <script>
+function openProject(title, description, link) {
+  document.getElementById("projectTitle").innerText = title;
+  document.getElementById("projectDesc").innerText = description;
+  document.getElementById("projectLink").href = link;
+  document.getElementById("projectModal").style.display = "block";
+}
+
+function closeProject() {
+  document.getElementById("projectModal").style.display = "none";
+}
+
+// Tutup popup kalau klik di luar modal
+window.onclick = function(e) {
+  let modal = document.getElementById("projectModal");
+  if (e.target == modal) modal.style.display = "none";
+}
+</script>
+
 </body>
 </html>
