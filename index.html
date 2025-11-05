@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Mikael Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -61,8 +61,45 @@
       color: #eee;
       margin-top: 40px;
     }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background: #fff;
+      max-width: 500px;
+      margin: 120px auto;
+      padding: 20px;
+      border-radius: 10px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .close {
+      float: right;
+      cursor: pointer;
+      font-size: 22px;
+    }
+
   </style>
 </head>
+<script>
+function openProject(title, desc, link) {
+  document.getElementById("modal-title").innerText = title;
+  document.getElementById("modal-description").innerText = desc;
+  document.getElementById("modal-link").href = link;
+  document.getElementById("project-modal").style.display = "block";
+}
+
+document.querySelector(".close").onclick = function() {
+  document.getElementById("project-modal").style.display = "none";
+};
+</script>
+
 <body>
   <header>
     <h1>Mikael Ade Krisna Respati</h1>
@@ -78,14 +115,26 @@
 
   <section>
     <h2>Projects</h2>
+    <!-- Modal -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <a id="modal-link" href="#" target="_blank">Open Project</a>
+      </div>
+    </div>
+
     <div class="projects">
       <div class="project-card">
         <h3>Personal Finance Tracker</h3>
         <p>Personal finance tracker using AI-agent, used n8n to build a Telegram bot for personal finance tracking.</p>
-        <a href="#" target="_blank">View Project</a>
+        <a href="https://www.linkedin.com/posts/mikael-ade-krisna-respati-6149a6117_hello-everyone-id-like-to-share-a-project-activity-7369600093248778241-UtfZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB0oMfABLPLtIWB6yKeeDj4dqCCKrph1QBg" target="_blank">View Project</a>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" onclick="openProject('BMI Prediction', 
+      'Developed a neural network model to predict BMI based on user inputs.', 
+      'https://www.kaggle.com/code/mikaelade/nn-bmi-prediction')">
         <h3>BMI Prediction</h3>
         <p>Developed a neural network model to predict BMI based on user inputs.</p>
         <a href="https://www.kaggle.com/code/mikaelade/nn-bmi-prediction" target="_blank">View Project</a>
