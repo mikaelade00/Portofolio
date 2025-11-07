@@ -3,217 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mikael Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f2f2f2;
-      color: #333;
-    }
-
-    header {
-      background: #111;
-      color: #fff;
-      padding: 50px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-
-    section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .project-card {
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #eee;
-      margin-top: 40px;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-    }
-
-    .modal-content {
-      background: #fff;
-      max-width: 500px;
-      margin: 120px auto;
-      padding: 20px;
-      border-radius: 10px;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .close {
-      float: right;
-      cursor: pointer;
-      font-size: 22px;
-    }
-
-  </style>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<script>
-function openProject(title, description, link) {
-  document.getElementById("projectTitle").innerText = title;
-  document.getElementById("projectDesc").innerText = description;
-  document.getElementById("projectLink").href = link;
-  document.getElementById("projectModal").style.display = "block";
-}
-
-function closeProject() {
-  document.getElementById("projectModal").style.display = "none";
-}
-
-// Tutup popup kalau klik di luar modal
-window.onclick = function(e) {
-  let modal = document.getElementById("projectModal");
-  if (e.target == modal) modal.style.display = "none";
-}
-</script>
 
 <body>
-  <div id="projectModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeProject()">&times;</span>
-    <h2 id="projectTitle"></h2>
-    <p id="projectDesc"></p>
-    <a id="projectLink" href="#" target="_blank">Visit Project</a>
+  <div class="sidebar">
+    <div class="profile-picture"></div>
+    <h2>Mikael Ade Krisna Respati</h2>
+    <p>Machine Learning Researcher</p>
+
+    <div class="nav-links">
+      <button class="nav-button" data-section="about">About Me</button>
+      <button class="nav-button" data-section="cv">CV</button>
+      <button class="nav-button" data-section="portfolio">Portfolio</button>
+    </div>
+
+    <div class="contact-info">
+      <h3>Contact</h3>
+      <p>Email: mikaeladekrisna@gmail.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/mikael-ade-krisna-respati-6149a6117/" target="_blank">Mikael Ade Krisna Respati</a></p>
+      <p>GitHub: <a href="https://github.com/mikaelade00" target="_blank">mikaelade00</a></p>
+    </div>
   </div>
-</div>
-<style>
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
-}
-.modal-content {
-  background: white;
-  padding: 20px;
-  width: 50%;
-  margin: 10% auto;
-  border-radius: 8px;
-  position: relative;
-}
-.close {
-  position: absolute;
-  top: 10px; right: 15px;
-  cursor: pointer;
-  font-size: 24px;
-}
-</style>
-  <header>
-    <h1>Mikael Ade Krisna Respati</h1>
-    <p>AI Engineer / Machine Learning Researcher</p>
-  </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>AI robotics master student at Sejong University and Electrical Engineering Graduate from Gadjah Mada University. 
-      I am interested in PCB designing and hardware stuff like sensors or IC, especially for the Internet of Thing. 
-      For now my focus research about machine learning on integrated sensing and communication (ISAC)</p>
-  </section>
+  <div class="content">
 
-  <section>
-    <h2>Projects</h2>
-    <!-- Modal -->
-    <div id="project-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3 id="modal-title"></h3>
-        <p id="modal-description"></p>
-        <a id="modal-link" href="#" target="_blank">Open Project</a>
+    <!-- ABOUT -->
+    <div class="section" id="about">
+      <h2>About Me</h2>
+      <div class="box">
+        <p>AI Engineer with a strong background in machine learning, deep learning, and data-driven system design. 
+          Experienced in developing end-to-end AI pipelines, implementing neural network architectures (CNN, LSTM, Transformer, Autoencoder), 
+          and optimizing models for real-world deployment. Skilled in Python, TensorFlow, PyTorch, and data preprocessing, 
+          with hands-on experience integrating AI into practical applications such as prediction systems, intelligent sensing, and embedded devices. 
+          Passionate about building robust, scalable, and efficient AI solutions that drive automation and intelligent decision-making across diverse domains.</p>
       </div>
     </div>
 
-    <div class="projects">
-      <div class="project-card">
-        <h3>Personal Finance Tracker</h3>
-        <p>Personal finance tracker using AI-agent, used n8n to build a Telegram bot for personal finance tracking.</p>
-        <a href="https://www.linkedin.com/posts/mikael-ade-krisna-respati-6149a6117_hello-everyone-id-like-to-share-a-project-activity-7369600093248778241-UtfZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB0oMfABLPLtIWB6yKeeDj4dqCCKrph1QBg" target="_blank">View Project</a>
+    <!-- CV -->
+    <div class="section" id="cv">
+      <h2>Curriculum Vitae</h2>
+
+      <div class="cv-box">
+        <h3>Education</h3>
+        <p><strong>Sejong University</strong>, Seoul, South Korea <span class="date">Feb 2024 – Feb 2026 (Expected)</span><br>
+        Master’s in AI and Robotics, GPA: 4.20 / 4.50.<br>
+        <em>Thesis: Joint Beamforming and Localization using Multi-Task Deep Learning</em><br>
+        Developed a CNN-based model using a soft parameter sharing approach with attention gates and designed an adaptive filter for CSI dimensionality reduction, trained end-to-end with the model.</p>
+
+        <p><strong>Gadjah Mada University</strong>, Yogyakarta, Indonesia <span class="date">Aug 2018 – Nov 2022</span><br>
+        Bachelor of Electrical Engineering, GPA: 3.20 / 4.00.<br>
+        <em>Thesis: Development of Indirect Mass Reporting System through Twitter Based on NLP</em><br>
+        Developed an SVM-based ML model to classify tweets as public service complaints or non-complaints in the Yogyakarta region.</p>
       </div>
 
-      <div class="project-card" onclick="openProject('BMI Prediction', 
-      'Developed a neural network model to predict BMI based on user inputs.', 
-      'https://www.kaggle.com/code/mikaelade/nn-bmi-prediction')">
-        <h3>BMI Prediction</h3>
-        <p>Developed a neural network model to predict BMI based on user inputs.</p>
-        <a href="https://www.kaggle.com/code/mikaelade/nn-bmi-prediction" target="_blank">View Project</a>
+      <div class="cv-box">
+        <h3>Experience</h3>
+        <p><strong>National Taiwan University of Science and Technology (NTUST)</strong>, Taipei, Taiwan <span class="date">Jul 2023 – Nov 2023</span><br>
+        <em>Research Assistant Intern, Center for IoT Innovation (CITI)</em><br>
+        Developed a Fault Prediction System for Wind Turbine Generators using LSTM networks in Python (TensorFlow, scikit-learn). Addressed data imbalance with SMOTEEN and implemented an Autoencoder with Attention layers, achieving MAE = 1.36 and R² = 0.9.</p>
+
+        <p><strong>PT. Lunar Inovasi Teknologi</strong>, Yogyakarta, Indonesia <span class="date">Dec 2022 – May 2023</span><br>
+        <em>Hardware Test Engineer</em><br>
+        Designed and developed PCBs for power monitoring ICs (ADE9153A and RN8902C) integrated with an ESP32-S3 microcontroller and OLED display to create a Smart Power Metering product using Altium Designer.</p>
+
+        <p><strong>PT. Lunar Inovasi Teknologi</strong>, Yogyakarta, Indonesia <span class="date">Sep 2022 – Nov 2022</span><br>
+        <em>Internship Program</em><br>
+        Designed and developed a power monitoring minimum system board utilizing RN8209C, V9021, and V9021S ICs using Altium Designer.</p>
       </div>
 
-      <div class="project-card">
-        <h3>Project Title 3</h3>
-        <p>Description of your project.</p>
-        <a href="#" target="_blank">View Project</a>
+      <div class="cv-box">
+        <h3>Publications</h3>
+        <p><strong>IEEE Access (2024):</strong> <em>A Survey on Machine Learning Enhanced Integrated Sensing and Communication Systems: Architectures, Algorithms, and Applications.</em></p>
+      </div>
+
+      <div class="cv-box">
+        <h3>Skills & Certifications</h3>
+        <p><strong>Technical:</strong> Python, C/C++, MATLAB, CNN, LSTM, Autoencoder, Attention Mechanism, AI Agents, ESP32, PCB Design (Altium, Eagle), Microcontrollers.</p>
+        <p><strong>Certificates:</strong> <strong>DeepLearning.AI TensorFlow Developer Specialization (2021)</strong><br>
+        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PPUB5Z2GA2VG" target="_blank">View Certificate</a></p>
+        <p><strong>Languages:</strong> English, Bahasa Indonesia</p>
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: mikaeladekrisna@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/mikaelade00">github.com/mikaelade00</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/mikael-ade-krisna-respati-6149a6117/">linkedin.com/in/mikael-ade-krisna-respati-6149a6117</a></p>
-  </section>
+    <!-- PORTFOLIO -->
+    <div class="section" id="portfolio">
+      <h2>Portfolio</h2>
 
-  <footer>
-    <p>&copy; 2025 Mikael Ade Krisna Respati. All rights reserved.</p>
-  </footer>
-  <script>
-function openProject(title, description, link) {
-  document.getElementById("projectTitle").innerText = title;
-  document.getElementById("projectDesc").innerText = description;
-  document.getElementById("projectLink").href = link;
-  document.getElementById("projectModal").style.display = "block";
-}
+      <div class="grid">
 
-function closeProject() {
-  document.getElementById("projectModal").style.display = "none";
-}
+        <a href="adaptive_filter.html" class="card">
+          <h3>Adaptive CSI-Based Beamforming & Localization Model</h3>
+          <p>Developed a deep learning framework for beamforming prediction and user localization from high-dimensional CSI in mmWave MIMO systems.</p>
+        </a>
 
-// Tutup popup kalau klik di luar modal
-window.onclick = function(e) {
-  let modal = document.getElementById("projectModal");
-  if (e.target == modal) modal.style.display = "none";
-}
-</script>
+        <a href="MTL.html" class="card">
+          <h3>Multitask Deep Learning for ISAC-Based Beamforming & Localization</h3>
+          <p>Developed a multitask deep learning model for beamforming selection and user localization using CSI.</p>
+        </a>
+
+        <a href="AI-agent.html" class="card">
+          <h3>Personal Finance Tracking Telegram Bot</h3>
+          <p>Developed a Telegram bot for personal finance tracking using AI agents and PostgreSQL.</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/script.js"></script>
 
 </body>
 </html>
