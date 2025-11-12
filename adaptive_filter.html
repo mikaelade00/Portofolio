@@ -10,18 +10,32 @@
   <div class="content">
     <div class="section active" id="project-detail">
       <h2>Adaptive CSI-Based Beamforming & Localization Model</h2>
-      <div class="box">
-        <p>I developed a deep learning framework that performs beamforming prediction and user localization from high-dimensional CSI in mmWave MIMO systems. To reduce computational overhead, I introduced an adaptive triangular filter with attention-based weighting that compresses CSI while keeping important spatial-frequency features.
+      <div class="project-content">
+        <div class="box">
+          <p>I developed a deep learning framework that performs beamforming prediction and user localization from high-dimensional CSI in mmWave MIMO systems. To reduce computational overhead, I introduced an adaptive triangular filter with attention-based weighting that compresses CSI while keeping important spatial-frequency features.</p>
           <h3>Highlights:</h3>
           <ul>
             <li>Multitask learning for joint beam prediction and coordinate localization.</li>
             <li>Adaptive filter module reduces model parameters by up to 88% while preserving performance.</li>
             <li>Attention-based weighting enhances important CSI features during compression.</li>
             <li>Achieved 88.0% top-1 beamforming accuracy and 2.30 m localization error.</li>
-            <li>Demonstrated strong robustness under low-SNR conditions through noisy data augmentation.</p>
+            <li>Demonstrated strong robustness under low-SNR conditions through noisy data augmentation.</li>
           </ul>
           <h3>Impact:</h3>
           <p>This method provides a lightweight and efficient solution for real-world mmWave massive MIMO deployment, reducing computation and memory usage while maintaining high accuracy.</p>
+        </div>
+        <div class="project-image">
+          <img src="assets/images/adaptive_filter/CNN_arch.png" alt="CNN Architecture">
+          <p class="image-caption">CNN Architecture with Adaptive Filter</p>
+        </div>
+        <div class="project-image">
+          <img src="assets/images/adaptive_filter/benchmark_model.png" alt="Benchmark Model Performance">
+          <p class="image-caption">Benchmark Model Performance</p>
+        </div>
+        <div class="project-image">
+          <img src="assets/images/adaptive_filter/benchmark_filter.png" alt="Benchmark Filter Performance">
+          <p class="image-caption">Benchmark Filter Performance</p>
+        </div>
         <p><a href="index.html#portfolio">Back to Portfolio</a></p>
       </div>
     </div>
