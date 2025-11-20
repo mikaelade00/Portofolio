@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCB Designs</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-image img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 6px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="section active" id="project-detail">
+            <h2>PCB Designs</h2>
+            <div class="project-content">
+                
+                <div class="box">
+                    <p>This section showcases various Printed Circuit Board (PCB) designs I have worked on. These designs include power monitoring ICs (ADE9153A, RN8209C) integrated with microcontrollers like ESP32, as well as mini power supply units.</p>
+                    <h3>Highlights:</h3>
+                    <ul>
+                        <li>Designed multi-layer PCBs using Altium Designer.</li>
+                        <li>Integrated various power monitoring ICs and microcontrollers.</li>
+                        <li>Developed compact and efficient power supply unit designs.</li>
+                        <li>Focused on signal integrity and power delivery network optimization.</li>
+                    </ul>
+                </div>
+
+                <!-- === Image Grid === -->
+                <div class="project-grid">
+
+                    <div class="project-image">
+                        <img src="assets/images/PCB/ADE9153A_brd.png" alt="ADE9153A Board Design">
+                        <p class="image-caption">ADE9153A Board Design</p>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="assets/images/PCB/ADE9153A_sch.png" alt="ADE9153A Schematic">
+                        <p class="image-caption">ADE9153A Schematic</p>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="assets/images/PCB/ESP32_miniOLED_brd1.png" alt="ESP32 miniOLED Board Design 1">
+                        <p class="image-caption">ESP32 miniOLED Board Design 1</p>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="assets/images/PCB/ESP32_miniOLED_brd2.png" alt="ESP32 miniOLED Board Design 2">
+                        <p class="image-caption">ESP32 miniOLED Board Design 2</p>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="assets/images/PCB/ESP32_miniOLED_sch.png" alt="ESP32 miniOLED Schematic">
+                        <p class="image-caption">ESP32 miniOLED Schematic</p>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="assets/images/PCB/Mini_PSU_brd.png" alt="Mini PSU Board Design">
+                        <p class="image-caption">Mini PSU Board Design</p>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="assets/images/PCB/Mini_PSU_sch.png" alt="Mini PSU Schematic">
+                        <p class="image-caption">Mini PSU Schematic</p>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="assets/images/PCB/RN8209C_brd.png" alt="RN8209C Board Design">
+                        <p class="image-caption">RN8209C Board Design</p>
+                    </div>
+
+                    <div class="project-image">
+                        <img src="assets/images/PCB/RN8209C_sch.png" alt="RN8209C Schematic">
+                        <p class="image-caption">RN8209C Schematic</p>
+                    </div>
+
+                </div>
+
+                <p><a href="index.html#portfolio">Back to Portfolio</a></p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
