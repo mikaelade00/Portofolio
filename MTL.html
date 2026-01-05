@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Multitask Deep Learning for ISAC-Based Beamforming & Localization</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-  <div class="content">
+  <div class="background-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="content project-page">
     <div class="section active" id="project-detail">
       <h2>Multitask Deep Learning for ISAC-Based Beamforming & Localization</h2>
       <div class="project-content">
         <div class="box">
-          <p>In this project, I developed a multitask deep learning model that performs beamforming selection and user localization simultaneously, inspired by Integrated Sensing and Communication (ISAC) for future 6G networks. The model uses a Convolutional Neural Network to extract features from Channel State Information (CSI) and a shared network head to output both the optimal beam index and estimated user position.
-            <h3>Features:</h3>
-            <ul>
-              <li>Multitask Learning: One model performs two tasks at once — beamforming prediction and coordinate localization.</li>
-              <li>Weighted Loss Optimization: Allows the network to balance and prioritize both objectives effectively.</li>
-              <li>High Antenna Array Support: Designed and tested on up to 64-antenna configurations.</li>
-            </ul>
-            <h3>Results:</h3>
-            <ul>
-              <li>Top-1 Beamforming Accuracy: 78.2%</li>
-              <li>Top-3 Accuracy: 99.21%</li>
-              <li>Localization Error: as low as 2.11 meters</li>
-            </ul>
-            <h3>Performance Gain:</h3>
-            <ul>
-              <li>+7% improvement over single-task beamforming models</li>
-              <li>81% reduction in localization error compared to baseline approaches</li>
-            </ul>
-            <h3>Impact:</h3>
-            <p>This work demonstrates how multitask learning can significantly improve efficiency and performance in ISAC systems, contributing to practical 6G wireless deployment strategies.</p>
-          </div>
-          <div class="project-image">
-            <img src="assets/images/MTL/CNN_structure.png" alt="CNN Structure">
-            <p class="image-caption">CNN Structure</p>
-          </div>
-          <div class="project-image">
-            <img src="assets/images/MTL/benckmark.png" alt="Benchmark Performance">
-            <p class="image-caption">Benchmark Performance</p>
-          </div>
-          <p><a href="index.html#portfolio">Back to Portfolio</a></p>
+          <p>In this project, I developed a multitask deep learning model that performs beamforming selection and user
+            localization simultaneously, inspired by Integrated Sensing and Communication (ISAC) for future 6G networks.
+            The model uses a Convolutional Neural Network to extract features from Channel State Information (CSI) and a
+            shared network head to output both the optimal beam index and estimated user position.
+          <h3>Features:</h3>
+          <ul>
+            <li>Multitask Learning: One model performs two tasks at once — beamforming prediction and coordinate
+              localization.</li>
+            <li>Weighted Loss Optimization: Allows the network to balance and prioritize both objectives effectively.
+            </li>
+            <li>High Antenna Array Support: Designed and tested on up to 64-antenna configurations.</li>
+          </ul>
+          <h3>Results:</h3>
+          <ul>
+            <li>Top-1 Beamforming Accuracy: 78.2%</li>
+            <li>Top-3 Accuracy: 99.21%</li>
+            <li>Localization Error: as low as 2.11 meters</li>
+          </ul>
+          <h3>Performance Gain:</h3>
+          <ul>
+            <li>+7% improvement over single-task beamforming models</li>
+            <li>81% reduction in localization error compared to baseline approaches</li>
+          </ul>
+          <h3>Impact:</h3>
+          <p>This work demonstrates how multitask learning can significantly improve efficiency and performance in ISAC
+            systems, contributing to practical 6G wireless deployment strategies.</p>
         </div>
+        <div class="project-image">
+          <img src="assets/images/MTL/CNN_structure.png" alt="CNN Structure">
+          <p class="image-caption">CNN Structure</p>
+        </div>
+        <div class="project-image">
+          <img src="assets/images/MTL/benckmark.png" alt="Benchmark Performance">
+          <p class="image-caption">Benchmark Performance</p>
+        </div>
+        <p><a href="index.html#portfolio">Back to Portfolio</a></p>
       </div>
+    </div>
+  </div>
+  <script src="assets/js/script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
+
 </html>

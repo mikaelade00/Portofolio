@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adaptive CSI-Based Beamforming & Localization Model</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-  <div class="content">
+  <div class="background-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="content project-page">
     <div class="section active" id="project-detail">
       <h2>Adaptive CSI-Based Beamforming & Localization Model</h2>
       <div class="project-content">
         <div class="box">
-          <p>I developed a deep learning framework that performs beamforming prediction and user localization from high-dimensional CSI in mmWave MIMO systems. To reduce computational overhead, I introduced an adaptive triangular filter with attention-based weighting that compresses CSI while keeping important spatial-frequency features.</p>
+          <p>I developed a deep learning framework that performs beamforming prediction and user localization from
+            high-dimensional CSI in mmWave MIMO systems. To reduce computational overhead, I introduced an adaptive
+            triangular filter with attention-based weighting that compresses CSI while keeping important
+            spatial-frequency features.</p>
           <h3>Highlights:</h3>
           <ul>
             <li>Multitask learning for joint beam prediction and coordinate localization.</li>
@@ -22,7 +37,9 @@
             <li>Demonstrated strong robustness under low-SNR conditions through noisy data augmentation.</li>
           </ul>
           <h3>Impact:</h3>
-          <p>This method provides a lightweight and efficient solution for real-world mmWave massive MIMO deployment, reducing computation and memory usage while maintaining high accuracy.</p>
+          <p>This method provides a lightweight and efficient solution for real-world mmWave massive MIMO deployment,
+            reducing computation and memory usage while maintaining high accuracy.</p>
+          <p>Paper: <a href="https://ieeexplore.ieee.org/abstract/document/11267407" target="_blank">View Paper</a> </p>
         </div>
         <div class="project-image">
           <img src="assets/images/adaptive_filter/CNN_arch.png" alt="CNN Architecture">
@@ -40,5 +57,10 @@
       </div>
     </div>
   </div>
+  <script src="assets/js/script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
+
 </html>

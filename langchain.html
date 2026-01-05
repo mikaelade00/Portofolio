@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LLM Agent for Personal Finance (Telegram Bot)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="content project-page">
+        <div class="section active" id="project-detail">
+            <h2>LLM Agent for Personal Finance</h2>
+            <div class="project-content">
+                <div class="box">
+                    <p>
+                        I developed an LLM-powered personal finance assistant integrated into Telegram, enabling
+                        users to log expenses and income through natural conversation.
+                        The core intelligence of the system is implemented using a LangChain-based agent, which
+                        interprets user intent, extracts structured financial information,
+                        and decides the appropriate action through tool invocation. The agent supports both text
+                        inputs and receipt images, allowing seamless multimodal interaction.
+                    </p>
+
+                    <h3>Key Contributions:</h3>
+                    <ul>
+                        <li>Designed and implemented a LangChain agent with structured reasoning flow for financial
+                            logging and querying.</li>
+                        <li>Integrated tool calling for actions such as transaction creation, categorization, and
+                            database insertion.</li>
+                        <li>Implemented short-term conversational memory to maintain context across multi-turn
+                            interactions.</li>
+                        <li>Developed robust prompt design to ensure consistent extraction of amount, category, and
+                            description from noisy user inputs.</li>
+                        <li>Enabled multimodal understanding by combining text-based reasoning with receipt image
+                            interpretation.</li>
+                    </ul>
+
+                    <h3>Technical Stack:</h3>
+                    <ul>
+                        <li>LangChain / LangGraph for agent orchestration and state management</li>
+                        <li>Gemini 2.5 Flash as the reasoning and multimodal LLM</li>
+                        <li>PostgreSQL for persistent transaction storage</li>
+                        <li>Telegram Bot API as the conversational interface</li>
+                    </ul>
+
+                    <h3>Outcome:</h3>
+                    <p>
+                        This project demonstrates my ability to design and implement a production-oriented LLM agent
+                        that goes beyond simple prompt-response patterns.
+                        It highlights my experience in agent reasoning, tool-based execution, memory handling, and
+                        real-world integration with databases and messaging platforms.
+                    </p>
+                    <p>GitHub: <a href="https://github.com/mikaelade00/Langchain_moneysaurus" target="_blank">Github
+                            Project</a></p>
+                </div>
+
+                <!-- <div class="project-image">
+                    <img src="assets/images/AI-agent/agent.png" alt="AI Agent Project Image">
+                    <p class="image-caption">AI Agent Reasoning & Execution Flow</p>
+                </div> -->
+
+                <p><a href="index.html#portfolio">Back to Portfolio</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

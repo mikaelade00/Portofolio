@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personal Finance Tracking Telegram Bot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-  <div class="content">
+  <div class="background-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="content project-page">
     <div class="section active" id="project-detail">
       <h2>Personal Finance Tracking Telegram Bot</h2>
       <div class="project-content">
-      <div class="project-content">
         <div class="box">
-          <p>I developed a Telegram bot that allows users to record personal expenses and income directly through chat. The bot supports both text and receipt images, making the logging process simple and seamless. An AI agent powered by Gemini 2.5 Flash automatically extracts the transaction amount, category, and description from the input. All records are stored in a PostgreSQL database for further tracking and analysis.</p>
+          <p>I developed a Telegram bot that allows users to record personal expenses and income directly through chat.
+            The bot supports both text and receipt images, making the logging process simple and seamless. An AI agent
+            powered by Gemini 2.5 Flash automatically extracts the transaction amount, category, and description from
+            the input. All records are stored in a PostgreSQL database for further tracking and analysis.</p>
           <h3>Key Contributions:</h3>
           <ul>
             <li>Designed the n8n workflow to manage bot interactions and data processing pipelines.</li>
-            <li>Implemented an AI agent for text and image understanding to classify and extract transaction details.</li>
+            <li>Implemented an AI agent for text and image understanding to classify and extract transaction details.
+            </li>
             <li>Built a structured PostgreSQL database for efficient and scalable financial record storage.</li>
             <li>Created a natural chat-based user experience to simplify daily expense logging.</li>
           </ul>
           <h3>Outcome:</h3>
-          <p>This project makes financial tracking more intuitive by removing the need to switch apps. It also allowed me to deepen my experience in AI agents, workflow automation, and database design.</p>
+          <p>This project makes financial tracking more intuitive by removing the need to switch apps. It also allowed
+            me to deepen my experience in AI agents, workflow automation, and database design.</p>
         </div>
         <div class="project-image">
           <img src="assets/images/AI-agent/agent.png" alt="AI Agent Project Image">
@@ -32,5 +47,10 @@
       </div>
     </div>
   </div>
+  <script src="assets/js/script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
+
 </html>

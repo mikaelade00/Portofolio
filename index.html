@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>Mikael Ade | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="profile-picture"></div>
-    <h2>Mikael Ade Krisna Respati</h2>
-    <p>Machine Learning Researcher</p>
+  <div class="background-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
 
-    <div class="nav-links">
-      <button class="nav-button" data-section="about">About Me</button>
-      <button class="nav-button" data-section="cv">CV</button>
-      <button class="nav-button" data-section="portfolio">Portfolio</button>
+  <div class="sidebar">
+    <div class="profile-container">
+      <div class="profile-picture">
+        <img src="assets/images/profil/Mikael_Ade_Photo.jpg" alt="Mikael Ade Krisna Respati">
+      </div>
+      <div class="profile-shimmer"></div>
     </div>
 
-    <div class="contact-info">
-      <h3>Contact</h3>
-      <p>Email: mikaeladekrisna@gmail.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/mikael-ade-krisna-respati-6149a6117/" target="_blank">Mikael Ade Krisna Respati</a></p>
-      <p>GitHub: <a href="https://github.com/mikaelade00" target="_blank">mikaelade00</a></p>
+    <div class="sidebar-header">
+      <h2>Mikael Ade</h2>
+      <p>Machine Learning Researcher</p>
+    </div>
+
+    <nav class="nav-links">
+      <button class="nav-button" data-section="about">
+        <i data-lucide="user"></i>
+        <span>About Me</span>
+      </button>
+      <button class="nav-button" data-section="cv">
+        <i data-lucide="file-text"></i>
+        <span>Experience</span>
+      </button>
+      <button class="nav-button" data-section="portfolio">
+        <i data-lucide="briefcase"></i>
+        <span>Portfolio</span>
+      </button>
+    </nav>
+
+    <div class="social-links">
+      <a href="mailto:mikaeladekrisna@gmail.com" title="Email"><i data-lucide="mail"></i></a>
+      <a href="https://www.linkedin.com/in/mikael-ade-krisna-respati6149a6117/" target="_blank" title="LinkedIn"><i
+          data-lucide="linkedin"></i></a>
+      <a href="https://github.com/mikaelade00" target="_blank" title="GitHub"><i data-lucide="github"></i></a>
     </div>
   </div>
 
@@ -33,11 +61,16 @@
     <div class="section" id="about">
       <h2>About Me</h2>
       <div class="box">
-        <p>Machine Learning Researcher with a strong background in machine learning, deep learning, and data-driven system design. 
-          Experienced in developing end-to-end AI pipelines, implementing neural network architectures (CNN, LSTM, Transformer, Autoencoder), 
-          and optimizing models for real-world deployment. Skilled in Python, TensorFlow, PyTorch, and data preprocessing, 
-          with hands-on experience integrating AI into practical applications such as prediction systems, intelligent sensing, and embedded devices. 
-          Passionate about building robust, scalable, and efficient AI solutions that drive automation and intelligent decision-making across diverse domains.</p>
+        <p>Machine Learning Researcher with a strong background in machine learning, deep learning, and data-driven
+          system design.
+          Experienced in developing end-to-end AI pipelines, implementing neural network architectures (CNN, LSTM,
+          Transformer, Autoencoder),
+          and optimizing models for real-world deployment. Skilled in Python, TensorFlow, PyTorch, and data
+          preprocessing,
+          with hands-on experience integrating AI into practical applications such as prediction systems, intelligent
+          sensing, and embedded devices.
+          Passionate about building robust, scalable, and efficient AI solutions that drive automation and intelligent
+          decision-making across diverse domains.</p>
       </div>
     </div>
 
@@ -46,43 +79,68 @@
       <h2>Curriculum Vitae</h2>
 
       <div class="cv-box">
-        <h3>Education</h3>
-        <p><strong>Sejong University</strong>, Seoul, South Korea <span class="date">Feb 2024 – Feb 2026 (Expected)</span><br>
-        Master’s in AI and Robotics, GPA: 4.20 / 4.50.<br>
-        <em>Thesis: Joint Beamforming and Localization using Multi-Task Deep Learning</em><br>
-        Developed a CNN-based model using a soft parameter sharing approach with attention gates and designed an adaptive filter for CSI dimensionality reduction, trained end-to-end with the model.</p>
+        <h3><i data-lucide="graduation-cap"></i> Education</h3>
+        <p><strong>Sejong University</strong>, Seoul, South Korea <span class="date">Mar 2024 – Feb 2026
+            (Expected)</span><br>
+          Master’s in AI and Robotics, GPA: 4.14 / 4.50.<br>
+          <em>Thesis: Joint Beamforming and Localization using Multi-Task Deep Learning</em><br>
+          Developed a CNN-based model using a soft parameter sharing approach with attention gates and designed an
+          adaptive filter for CSI dimensionality reduction, trained end-to-end with the model.
+        </p>
 
-        <p><strong>Gadjah Mada University</strong>, Yogyakarta, Indonesia <span class="date">Aug 2018 – Nov 2022</span><br>
-        Bachelor of Electrical Engineering, GPA: 3.20 / 4.00.<br>
-        <em>Thesis: Development of Indirect Mass Reporting System through Twitter Based on NLP</em><br>
-        Developed an SVM-based ML model to classify tweets as public service complaints or non-complaints in the Yogyakarta region.</p>
+        <p><strong>Gadjah Mada University</strong>, Yogyakarta, Indonesia <span class="date">Aug 2018 – Nov
+            2022</span><br>
+          Bachelor of Electrical Engineering, GPA: 3.20 / 4.00.<br>
+          <em>Thesis: Development of Indirect Mass Reporting System through Twitter Based on NLP</em><br>
+          Developed an SVM-based ML model to classify tweets as public service complaints or non-complaints in the
+          Yogyakarta region.
+        </p>
       </div>
 
       <div class="cv-box">
-        <h3>Experience</h3>
-        <p><strong>National Taiwan University of Science and Technology (NTUST)</strong>, Taipei, Taiwan <span class="date">Jul 2023 – Nov 2023</span><br>
-        <em>Research Assistant Intern, Center for IoT Innovation (CITI)</em><br>
-        Developed a Fault Prediction System for Wind Turbine Generators using LSTM networks in Python (TensorFlow, scikit-learn). Addressed data imbalance with SMOTEEN and implemented an Autoencoder with Attention layers, achieving MAE = 1.36 and R² = 0.9.</p>
+        <h3><i data-lucide="briefcase"></i> Experience</h3>
+        <p><strong>National Taiwan University of Science and Technology (NTUST)</strong>, Taipei, Taiwan <span
+            class="date">Jul 2023 – Nov 2023</span><br>
+          <em>Research Assistant Intern, Center for IoT Innovation (CITI)</em><br>
+          Developed a Fault Prediction System for Wind Turbine Generators using LSTM networks in Python (TensorFlow,
+          scikit-learn). Addressed data imbalance with SMOTEEN and implemented an Autoencoder with Attention layers,
+          achieving MAE = 1.36 and R² = 0.9.
+        </p>
 
-        <p><strong>PT. Lunar Inovasi Teknologi</strong>, Yogyakarta, Indonesia <span class="date">Dec 2022 – May 2023</span><br>
-        <em>Hardware Test Engineer</em><br>
-        Designed and developed PCBs for power monitoring ICs (ADE9153A and RN8902C) integrated with an ESP32-S3 microcontroller and OLED display to create a Smart Power Metering product using Altium Designer.</p>
+        <p><strong>PT. Lunar Inovasi Teknologi</strong>, Yogyakarta, Indonesia <span class="date">Dec 2022 – May
+            2023</span><br>
+          <em>Hardware Test Engineer</em><br>
+          Designed and developed PCBs for power monitoring ICs (ADE9153A and RN8902C) integrated with an ESP32-S3
+          microcontroller and OLED display to create a Smart Power Metering product using Altium Designer.
+        </p>
 
-        <p><strong>PT. Lunar Inovasi Teknologi</strong>, Yogyakarta, Indonesia <span class="date">Sep 2022 – Nov 2022</span><br>
-        <em>Internship Program</em><br>
-        Designed and developed a power monitoring minimum system board utilizing RN8209C, V9021, and V9021S ICs using Altium Designer.</p>
+        <p><strong>PT. Lunar Inovasi Teknologi</strong>, Yogyakarta, Indonesia <span class="date">Sep 2022 – Nov
+            2022</span><br>
+          <em>Internship Program</em><br>
+          Designed and developed a power monitoring minimum system board utilizing RN8209C, V9021, and V9021S ICs using
+          Altium Designer.
+        </p>
       </div>
 
       <div class="cv-box">
-        <h3>Publications</h3>
-        <p><strong>IEEE Access (2024):</strong> <em>A Survey on Machine Learning Enhanced Integrated Sensing and Communication Systems: Architectures, Algorithms, and Applications.</em></p>
+        <h3><i data-lucide="book-open"></i> Publications</h3>
+        <p><strong>Journal of Communications and Networks (2025):</strong> <em>CSI-Based Beamforming and Localization
+            for Massive MIMO Using Deep Learning.</em></p>
+        <p><strong>IEEE Access (2025):</strong> <em>Multi-Task Deep Learning with Adaptive CSI Filtering for Joint
+            Beamforming and Localization.</em></p>
+        <p><strong>IEEE Access (2024):</strong> <em>A Survey on Machine Learning Enhanced Integrated Sensing and
+            Communication Systems: Architectures, Algorithms, and Applications.</em></p>
       </div>
 
       <div class="cv-box">
-        <h3>Skills & Certifications</h3>
-        <p><strong>Technical:</strong> Python, C/C++, MATLAB, CNN, LSTM, Autoencoder, Attention Mechanism, AI Agents, ESP32, PCB Design (Altium, Eagle), Microcontrollers.</p>
-        <p><strong>Certificates:</strong> <strong>DeepLearning.AI TensorFlow Developer Specialization (2021)</strong><br>
-        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PPUB5Z2GA2VG" target="_blank">View Certificate</a></p>
+        <h3><i data-lucide="code"></i> Skills & Certifications</h3>
+        <p><strong>Technical:</strong> Python, C/C++, MATLAB, CNN, LSTM, Autoencoder, Attention Mechanism, AI Agents,
+          ESP32, PCB Design (Altium, Eagle), Microcontrollers.</p>
+        <p><strong>Certificates:</strong> <strong>DeepLearning.AI TensorFlow Developer Specialization
+            (2021)</strong><br>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PPUB5Z2GA2VG"
+            target="_blank">View Certificate</a>
+        </p>
         <p><strong>Languages:</strong> English, Bahasa Indonesia</p>
       </div>
     </div>
@@ -93,9 +151,16 @@
 
       <div class="grid">
 
+        <a href="langchain.html" class="card">
+          <h3>LLM Agent for Personal Finance (Telegram Bot)</h3>
+          <p>Designed a LangChain-based LLM agent with tool calling, conversational memory, and PostgreSQL integration
+            for finance tracking.</p>
+        </a>
+
         <a href="adaptive_filter.html" class="card">
           <h3>Adaptive CSI-Based Beamforming & Localization Model</h3>
-          <p>Developed a deep learning framework for beamforming prediction and user localization from high-dimensional CSI in mmWave MIMO systems.</p>
+          <p>Developed a deep learning framework for beamforming prediction and user localization from high-dimensional
+            CSI in mmWave MIMO systems.</p>
         </a>
 
         <a href="MTL.html" class="card">
@@ -110,7 +175,8 @@
 
         <a href="latex_translator.html" class="card">
           <h3>LaTeX Chunking & Translation</h3>
-          <p>Created a Python-based pipeline for chunking, translating, and reconstructing LaTeX documents using LLMs.</p>
+          <p>Created a Python-based pipeline for chunking, translating, and reconstructing LaTeX documents using LLMs.
+          </p>
         </a>
 
         <a href="pcb_designs.html" class="card">
@@ -125,4 +191,5 @@
   <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>

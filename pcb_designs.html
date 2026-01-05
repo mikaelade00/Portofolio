@@ -1,53 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCB Designs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <style>
-    .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .project-image {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-image img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 4 / 3;      
-        object-fit: contain;      
-        border-radius: 8px;
-        background: #f7f7f7;      
-        padding: 10px;
-    }
-
-    .image-caption {
-        margin-top: 6px;
-        font-size: 0.9rem;
-        color: #666;
-        text-align: center;
-    }
-    </style>
 </head>
 
 <body>
-    <div class="content">
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="content project-page">
         <div class="section active" id="project-detail">
             <h2>PCB Designs</h2>
             <div class="project-content">
-                
+
                 <div class="box">
-                    <p>This section showcases various Printed Circuit Board (PCB) designs I have worked on. These designs include power monitoring ICs (ADE9153A, RN8209C) integrated with microcontrollers like ESP32, as well as mini power supply units.</p>
+                    <p>This section showcases various Printed Circuit Board (PCB) designs I have worked on. These
+                        designs include power monitoring ICs (ADE9153A, RN8209C) integrated with microcontrollers like
+                        ESP32, as well as mini power supply units.</p>
                     <h3>Highlights:</h3>
                     <ul>
                         <li>Designed multi-layer PCBs using Altium Designer.</li>
@@ -72,12 +51,12 @@
 
                     <div class="project-image">
                         <img src="assets/images/PCB/ESP32_miniOLED_brd1.png" alt="ESP32 miniOLED Board Design 1">
-                        <p class="image-caption">ESP32 miniOLED Board Design 1</p>
+                        <p class="image-caption">ESP32 miniOLED Board Layer 1</p>
                     </div>
 
                     <div class="project-image">
                         <img src="assets/images/PCB/ESP32_miniOLED_brd2.png" alt="ESP32 miniOLED Board Design 2">
-                        <p class="image-caption">ESP32 miniOLED Board Design 2</p>
+                        <p class="image-caption">ESP32 miniOLED Board Layer 2</p>
                     </div>
 
                     <div class="project-image">
@@ -112,5 +91,10 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>

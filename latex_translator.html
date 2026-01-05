@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LaTeX Chunking & Translation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-  <div class="content">
+  <div class="background-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="content project-page">
     <div class="section active" id="project-detail">
       <h2>LaTeX Chunking & Translation</h2>
       <div class="project-content">
         <div class="box">
-          <p>This project provides a Python-based pipeline for processing LaTeX documents. It splits LaTeX files into structured chunks by <code>\section</code>, <code>\subsection</code>, and <code>\subsubsection</code>, preserves LaTeX commands, and allows translation of textual content using LLMs while keeping math, citations, and formatting intact.</p>
+          <p>This project provides a Python-based pipeline for processing LaTeX documents. It splits LaTeX files into
+            structured chunks by <code>\section</code>, <code>\subsection</code>, and <code>\subsubsection</code>,
+            preserves LaTeX commands, and allows translation of textual content using LLMs while keeping math,
+            citations, and formatting intact.</p>
           <h3>Key Contributions:</h3>
           <ul>
-            <li>Developed a chunking system that maintains LaTeX structure for sections, subsections, and subsubsections.</li>
-            <li>Implemented a safe translation workflow for LLMs to translate content without breaking LaTeX commands or math formulas.</li>
-            <li>Created a reconstruction script to merge translated chunks back into a fully compilable LaTeX document.</li>
-            <li>Prepared JSON-based chunking output for easy integration with translation models or automation pipelines.</li>
+            <li>Developed a chunking system that maintains LaTeX structure for sections, subsections, and
+              subsubsections.</li>
+            <li>Implemented a safe translation workflow for LLMs to translate content without breaking LaTeX commands or
+              math formulas.</li>
+            <li>Created a reconstruction script to merge translated chunks back into a fully compilable LaTeX document.
+            </li>
+            <li>Prepared JSON-based chunking output for easy integration with translation models or automation
+              pipelines.</li>
           </ul>
           <h3>Outcome:</h3>
-          <p>This project makes it simple to translate academic papers or LaTeX documents into multiple languages while preserving formatting and structure. It demonstrates capabilities in Python scripting, text processing, and LLM-assisted workflows.</p>
-        <p>GitHub: <a href="https://github.com/mikaelade00/translate_latex" target="_blank">Github Project</a></p>
+          <p>This project makes it simple to translate academic papers or LaTeX documents into multiple languages while
+            preserving formatting and structure. It demonstrates capabilities in Python scripting, text processing, and
+            LLM-assisted workflows.</p>
+          <p>GitHub: <a href="https://github.com/mikaelade00/translate_latex" target="_blank">Github Project</a></p>
         </div>
         <div class="project-image">
           <img src="assets/images/latex_chunking/workflow.png" alt="LaTeX Chunking & Translation Workflow">
@@ -32,5 +52,10 @@
       </div>
     </div>
   </div>
+  <script src="assets/js/script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
+
 </html>
