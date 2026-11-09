@@ -2,60 +2,82 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LaTeX Chunking & Translation</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LaTeX Chunking &amp; Translation | Mikael Ade</title>
+  <meta name="description" content="A Python pipeline that chunks LaTeX documents, translates the prose with an LLM, and rebuilds a document that still compiles.">
+  <meta property="og:title" content="LaTeX Chunking & Translation">
+  <meta property="og:description" content="Translate LaTeX papers with an LLM without breaking math, citations or formatting.">
+  <meta property="og:image" content="assets/images/latex_chunking/workflow.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='white'%3EMA%3C/text%3E%3C/svg%3E">
+  <script>(function () { var t; try { t = localStorage.getItem('theme'); } catch (e) { } if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; var r = document.documentElement; r.setAttribute('data-theme', t); r.classList.add('js'); })();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <div class="background-blobs">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
-  <div class="content project-page">
-    <div class="section active" id="project-detail">
-      <h2>LaTeX Chunking & Translation</h2>
-      <div class="project-content">
-        <div class="box">
-          <p>This project provides a Python-based pipeline for processing LaTeX documents. It splits LaTeX files into
-            structured chunks by <code>\section</code>, <code>\subsection</code>, and <code>\subsubsection</code>,
-            preserves LaTeX commands, and allows translation of textual content using LLMs while keeping math,
-            citations, and formatting intact.</p>
-          <h3>Key Contributions:</h3>
-          <ul>
-            <li>Developed a chunking system that maintains LaTeX structure for sections, subsections, and
-              subsubsections.</li>
-            <li>Implemented a safe translation workflow for LLMs to translate content without breaking LaTeX commands or
-              math formulas.</li>
-            <li>Created a reconstruction script to merge translated chunks back into a fully compilable LaTeX document.
-            </li>
-            <li>Prepared JSON-based chunking output for easy integration with translation models or automation
-              pipelines.</li>
-          </ul>
-          <h3>Outcome:</h3>
-          <p>This project makes it simple to translate academic papers or LaTeX documents into multiple languages while
-            preserving formatting and structure. It demonstrates capabilities in Python scripting, text processing, and
-            LLM-assisted workflows.</p>
-          <p>GitHub: <a href="https://github.com/mikaelade00/translate_latex" target="_blank">Github Project</a></p>
-        </div>
-        <div class="project-image">
-          <img src="assets/images/latex_chunking/workflow.png" alt="LaTeX Chunking & Translation Workflow">
-          <p class="image-caption">Pipeline: Chunking → Translation → Reconstruction</p>
-        </div>
-        <p><a href="index.html#portfolio">Back to Portfolio</a></p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-nav">
+    <nav class="container" aria-label="Main">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">MA</span>Mikael Ade</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#projects" class="active">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme"><i data-lucide="moon" class="icon-moon"></i><i data-lucide="sun" class="icon-sun"></i></button>
+      <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><i data-lucide="menu"></i></button>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <section class="project-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html#projects">Projects</a><i data-lucide="chevron-right"></i><span>AI &amp; Agents</span></nav>
+      <h1>LaTeX Chunking &amp; Translation</h1>
+      <p class="project-lead">A Python pipeline that splits LaTeX documents into structured chunks, translates the
+        prose with an LLM while leaving math, citations and commands untouched, and stitches everything back into a
+        document that still compiles.</p>
+      <ul class="chips"><li class="chip">Python</li><li class="chip">LLM</li><li class="chip">LaTeX</li><li class="chip">JSON</li></ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/mikaelade00/translate_latex" target="_blank" rel="noopener"><i data-lucide="github"></i>View on GitHub</a>
       </div>
+    </section>
+
+    <article class="prose card-surface reveal">
+      <h2>How it works</h2>
+      <p>Documents are split by <code>\section</code>, <code>\subsection</code> and <code>\subsubsection</code>.
+        Each chunk keeps its LaTeX commands, and only the text is sent to the LLM for translation.</p>
+      <h2>Key contributions</h2>
+      <ul>
+        <li>A chunker that preserves LaTeX structure across sections, subsections and subsubsections.</li>
+        <li>A safe translation flow so the LLM never breaks commands or math formulas.</li>
+        <li>A reconstruction script that merges translated chunks into a fully compilable document.</li>
+        <li>JSON chunk output that plugs easily into translation models or automation pipelines.</li>
+      </ul>
+      <h2>Outcome</h2>
+      <p>Translating academic papers into other languages becomes simple, with formatting and structure intact.</p>
+    </article>
+
+    <h2 class="gallery-title">Figures</h2>
+    <div class="gallery single">
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: pipeline diagram"><img src="assets/images/latex_chunking/workflow.png" alt="Pipeline diagram: chunking, translation, reconstruction" loading="lazy" decoding="async"></button><figcaption>Pipeline: chunking → translation → reconstruction</figcaption></figure>
     </div>
-  </div>
+
+    <nav class="pager" aria-label="More projects">
+      <a class="card-surface" href="langchain.html"><small><i data-lucide="arrow-left"></i> Previous project</small><span>Moneysaurus Prototype</span></a>
+      <a class="next card-surface" href="pcb_designs.html"><small>Next project <i data-lucide="arrow-right"></i></small><span>PCB Designs</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><span>© <span id="year">2026</span> Mikael Ade Krisna Respati</span><a href="index.html#projects">All projects</a></div>
+  </footer>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <script src="assets/js/script.js"></script>
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 
 </html>

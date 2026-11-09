@@ -2,99 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PCB Designs</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCB Designs | Mikael Ade</title>
+  <meta name="description" content="PCB designs for power-monitoring ICs (ADE9153A, RN8209C), an ESP32 mini OLED board and a compact power supply, made in Altium Designer.">
+  <meta property="og:title" content="PCB Designs">
+  <meta property="og:description" content="Power-monitoring boards, an ESP32 mini OLED board and a mini PSU.">
+  <meta property="og:image" content="assets/images/PCB/ESP32_miniOLED_brd1.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='white'%3EMA%3C/text%3E%3C/svg%3E">
+  <script>(function () { var t; try { t = localStorage.getItem('theme'); } catch (e) { } if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; var r = document.documentElement; r.setAttribute('data-theme', t); r.classList.add('js'); })();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-nav">
+    <nav class="container" aria-label="Main">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">MA</span>Mikael Ade</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#projects" class="active">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme"><i data-lucide="moon" class="icon-moon"></i><i data-lucide="sun" class="icon-sun"></i></button>
+      <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><i data-lucide="menu"></i></button>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <section class="project-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html#projects">Projects</a><i data-lucide="chevron-right"></i><span>Embedded &amp; Hardware</span></nav>
+      <h1>PCB Designs</h1>
+      <p class="project-lead">Boards I designed for power-monitoring ICs (ADE9153A, RN8209C) with microcontrollers
+        such as the ESP32, plus a compact power supply unit.</p>
+      <ul class="chips"><li class="chip">Altium Designer</li><li class="chip">ESP32</li><li class="chip">ADE9153A</li><li class="chip">RN8209C</li><li class="chip">Power supply</li></ul>
+    </section>
+
+    <article class="prose card-surface reveal">
+      <h2>Highlights</h2>
+      <ul>
+        <li>Multi-layer PCBs designed in Altium Designer.</li>
+        <li>Power-monitoring ICs integrated with microcontrollers.</li>
+        <li>Compact, efficient power supply designs.</li>
+        <li>Attention to signal integrity and the power delivery network.</li>
+      </ul>
+    </article>
+
+    <h2 class="gallery-title">ADE9153A energy meter</h2>
+    <div class="gallery">
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: ADE9153A board layout"><img src="assets/images/PCB/ADE9153A_brd.png" alt="ADE9153A board layout" loading="lazy" decoding="async"></button><figcaption>Board layout</figcaption></figure>
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: ADE9153A schematic"><img src="assets/images/PCB/ADE9153A_sch.png" alt="ADE9153A schematic" loading="lazy" decoding="async"></button><figcaption>Schematic</figcaption></figure>
     </div>
-    <div class="content project-page">
-        <div class="section active" id="project-detail">
-            <h2>PCB Designs</h2>
-            <div class="project-content">
 
-                <div class="box">
-                    <p>This section showcases various Printed Circuit Board (PCB) designs I have worked on. These
-                        designs include power monitoring ICs (ADE9153A, RN8209C) integrated with microcontrollers like
-                        ESP32, as well as mini power supply units.</p>
-                    <h3>Highlights:</h3>
-                    <ul>
-                        <li>Designed multi-layer PCBs using Altium Designer.</li>
-                        <li>Integrated various power monitoring ICs and microcontrollers.</li>
-                        <li>Developed compact and efficient power supply unit designs.</li>
-                        <li>Focused on signal integrity and power delivery network optimization.</li>
-                    </ul>
-                </div>
-
-                <!-- === Image Grid === -->
-                <div class="project-grid">
-
-                    <div class="project-image">
-                        <img src="assets/images/PCB/ADE9153A_brd.png" alt="ADE9153A Board Design">
-                        <p class="image-caption">ADE9153A Board Design</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="assets/images/PCB/ADE9153A_sch.png" alt="ADE9153A Schematic">
-                        <p class="image-caption">ADE9153A Schematic</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="assets/images/PCB/ESP32_miniOLED_brd1.png" alt="ESP32 miniOLED Board Design 1">
-                        <p class="image-caption">ESP32 miniOLED Board Layer 1</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="assets/images/PCB/ESP32_miniOLED_brd2.png" alt="ESP32 miniOLED Board Design 2">
-                        <p class="image-caption">ESP32 miniOLED Board Layer 2</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="assets/images/PCB/ESP32_miniOLED_sch.png" alt="ESP32 miniOLED Schematic">
-                        <p class="image-caption">ESP32 miniOLED Schematic</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="assets/images/PCB/Mini_PSU_brd.png" alt="Mini PSU Board Design">
-                        <p class="image-caption">Mini PSU Board Design</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="assets/images/PCB/Mini_PSU_sch.png" alt="Mini PSU Schematic">
-                        <p class="image-caption">Mini PSU Schematic</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="assets/images/PCB/RN8209C_brd.png" alt="RN8209C Board Design">
-                        <p class="image-caption">RN8209C Board Design</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="assets/images/PCB/RN8209C_sch.png" alt="RN8209C Schematic">
-                        <p class="image-caption">RN8209C Schematic</p>
-                    </div>
-
-                </div>
-
-                <p><a href="index.html#portfolio">Back to Portfolio</a></p>
-
-            </div>
-        </div>
+    <h2 class="gallery-title">ESP32 mini OLED board</h2>
+    <div class="gallery">
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: ESP32 mini OLED layer 1"><img src="assets/images/PCB/ESP32_miniOLED_brd1.png" alt="ESP32 mini OLED board, layer 1" loading="lazy" decoding="async"></button><figcaption>Board layer 1</figcaption></figure>
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: ESP32 mini OLED layer 2"><img src="assets/images/PCB/ESP32_miniOLED_brd2.png" alt="ESP32 mini OLED board, layer 2" loading="lazy" decoding="async"></button><figcaption>Board layer 2</figcaption></figure>
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: ESP32 mini OLED schematic"><img src="assets/images/PCB/ESP32_miniOLED_sch.png" alt="ESP32 mini OLED schematic" loading="lazy" decoding="async"></button><figcaption>Schematic</figcaption></figure>
     </div>
-    <script src="assets/js/script.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+
+    <h2 class="gallery-title">Mini power supply</h2>
+    <div class="gallery">
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: mini PSU board layout"><img src="assets/images/PCB/Mini_PSU_brd.png" alt="Mini PSU board layout" loading="lazy" decoding="async"></button><figcaption>Board layout</figcaption></figure>
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: mini PSU schematic"><img src="assets/images/PCB/Mini_PSU_sch.png" alt="Mini PSU schematic" loading="lazy" decoding="async"></button><figcaption>Schematic</figcaption></figure>
+    </div>
+
+    <h2 class="gallery-title">RN8209C power monitor</h2>
+    <div class="gallery">
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: RN8209C board layout"><img src="assets/images/PCB/RN8209C_brd.png" alt="RN8209C board layout" loading="lazy" decoding="async"></button><figcaption>Board layout</figcaption></figure>
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: RN8209C schematic"><img src="assets/images/PCB/RN8209C_sch.png" alt="RN8209C schematic" loading="lazy" decoding="async"></button><figcaption>Schematic</figcaption></figure>
+    </div>
+
+    <nav class="pager" aria-label="More projects">
+      <a class="card-surface" href="latex_translator.html"><small><i data-lucide="arrow-left"></i> Previous project</small><span>LaTeX Chunking &amp; Translation</span></a>
+      <a class="next card-surface" href="index.html#projects"><small>Back <i data-lucide="arrow-right"></i></small><span>All projects</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><span>© <span id="year">2026</span> Mikael Ade Krisna Respati</span><a href="index.html#projects">All projects</a></div>
+  </footer>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>

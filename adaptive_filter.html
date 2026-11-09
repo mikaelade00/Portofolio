@@ -2,65 +2,96 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adaptive CSI-Based Beamforming & Localization Model</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive CSI Filtering for Beamforming &amp; Localization | Mikael Ade</title>
+  <meta name="description" content="A multi-task deep learning model with an adaptive CSI filter for joint beamforming and localization in mmWave massive MIMO. Published in IEEE Access 2025.">
+  <meta property="og:title" content="Adaptive CSI Filtering for Beamforming & Localization">
+  <meta property="og:description" content="Up to 88% fewer parameters, 88% top-1 beam accuracy, 2.30 m localization error.">
+  <meta property="og:image" content="assets/images/adaptive_filter/CNN_arch.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='white'%3EMA%3C/text%3E%3C/svg%3E">
+  <script>(function () { var t; try { t = localStorage.getItem('theme'); } catch (e) { } if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; var r = document.documentElement; r.setAttribute('data-theme', t); r.classList.add('js'); })();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <div class="background-blobs">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-nav">
+    <nav class="container" aria-label="Main">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">MA</span>Mikael Ade</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#projects" class="active">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme"><i data-lucide="moon" class="icon-moon"></i><i data-lucide="sun" class="icon-sun"></i></button>
+      <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><i data-lucide="menu"></i></button>
+    </nav>
+  </header>
 
-  <div class="content project-page">
-    <div class="section active" id="project-detail">
-      <h2>Adaptive CSI-Based Beamforming & Localization Model</h2>
-      <div class="project-content">
-        <div class="box">
-          <p>I developed a deep learning framework that performs beamforming prediction and user localization from
-            high-dimensional CSI in mmWave MIMO systems. To reduce computational overhead, I introduced an adaptive
-            triangular filter with attention-based weighting that compresses CSI while keeping important
-            spatial-frequency features.</p>
-          <h3>Highlights:</h3>
-          <ul>
-            <li>Multitask learning for joint beam prediction and coordinate localization.</li>
-            <li>Adaptive filter module reduces model parameters by up to 88% while preserving performance.</li>
-            <li>Attention-based weighting enhances important CSI features during compression.</li>
-            <li>Achieved 88.0% top-1 beamforming accuracy and 2.30 m localization error.</li>
-            <li>Demonstrated strong robustness under low-SNR conditions through noisy data augmentation.</li>
-          </ul>
-          <h3>Impact:</h3>
-          <p>This method provides a lightweight and efficient solution for real-world mmWave massive MIMO deployment,
-            reducing computation and memory usage while maintaining high accuracy.</p>
-          <p>Paper: <a href="https://ieeexplore.ieee.org/abstract/document/11267407" target="_blank">View Paper</a> </p>
-        </div>
-        <div class="project-image">
-          <img src="assets/images/adaptive_filter/CNN_arch.png" alt="CNN Architecture">
-          <p class="image-caption">CNN Architecture with Adaptive Filter</p>
-        </div>
-        <div class="project-image">
-          <img src="assets/images/adaptive_filter/benchmark_model.png" alt="Benchmark Model Performance">
-          <p class="image-caption">Benchmark Model Performance</p>
-        </div>
-        <div class="project-image">
-          <img src="assets/images/adaptive_filter/benchmark_filter.png" alt="Benchmark Filter Performance">
-          <p class="image-caption">Benchmark Filter Performance</p>
-        </div>
-        <p><a href="index.html#portfolio">Back to Portfolio</a></p>
+  <main id="main" class="container">
+    <section class="project-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html#projects">Projects</a><i data-lucide="chevron-right"></i><span>Research</span></nav>
+      <h1>Adaptive CSI Filtering for Joint Beamforming &amp; Localization</h1>
+      <p class="project-lead">A deep learning framework that predicts the best beam and the user's position from
+        high-dimensional channel state information (CSI) in mmWave massive MIMO, with a learnable filter that
+        compresses CSI before the network sees it.</p>
+      <ul class="chips"><li class="chip">Multi-task CNN</li><li class="chip">Attention</li><li class="chip">mmWave MIMO</li><li class="chip">PyTorch</li><li class="chip chip-muted">IEEE Access 2025</li></ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://ieeexplore.ieee.org/abstract/document/11267407" target="_blank" rel="noopener"><i data-lucide="file-text"></i>Read the paper</a>
       </div>
+      <div class="metrics">
+        <div class="metric card-surface"><div class="stat-value">88.0%</div><div class="stat-label">Top-1 beam accuracy</div></div>
+        <div class="metric card-surface"><div class="stat-value">2.30 m</div><div class="stat-label">Localization error</div></div>
+        <div class="metric card-surface"><div class="stat-value">−88%</div><div class="stat-label">Model parameters</div></div>
+      </div>
+    </section>
+
+    <article class="prose card-surface reveal">
+      <h2>The problem</h2>
+      <p>CSI in mmWave massive MIMO is huge: many antennas times many subcarriers. Feeding it straight into a
+        network makes models slow and memory-hungry, which is a problem for real base-station deployment.</p>
+      <h2>Approach</h2>
+      <p>I introduced an adaptive triangular filter with attention-based weighting that compresses CSI while keeping
+        the important spatial-frequency features. The filter is trained end-to-end with a multi-task network that
+        predicts the beam index and the user's coordinates at the same time.</p>
+      <h2>Highlights</h2>
+      <ul>
+        <li>Multi-task learning for joint beam prediction and coordinate localization.</li>
+        <li>The adaptive filter module cuts model parameters by up to 88% while preserving performance.</li>
+        <li>Attention-based weighting keeps the most informative CSI features during compression.</li>
+        <li>88.0% top-1 beamforming accuracy and 2.30 m localization error.</li>
+        <li>Robust under low SNR thanks to noisy data augmentation.</li>
+      </ul>
+      <h2>Impact</h2>
+      <p>A lightweight, accurate model for real-world mmWave massive MIMO deployment that uses far less compute and
+        memory than a full-CSI baseline.</p>
+    </article>
+
+    <h2 class="gallery-title">Figures</h2>
+    <div class="gallery single">
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: CNN architecture with adaptive filter"><img src="assets/images/adaptive_filter/CNN_arch.png" alt="Network diagram: CSI input, adaptive filter, shared CNN layers, and beam and position heads" loading="lazy" decoding="async"></button><figcaption>CNN architecture with the adaptive filter</figcaption></figure>
     </div>
-  </div>
+    <div class="gallery" style="margin-top:18px">
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: benchmark of model performance"><img src="assets/images/adaptive_filter/benchmark_model.png" alt="Chart comparing the proposed model with baseline models" loading="lazy" decoding="async"></button><figcaption>Model benchmark</figcaption></figure>
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: benchmark of filter performance"><img src="assets/images/adaptive_filter/benchmark_filter.png" alt="Chart comparing the adaptive filter with other CSI reduction methods" loading="lazy" decoding="async"></button><figcaption>Filter benchmark</figcaption></figure>
+    </div>
+
+    <nav class="pager" aria-label="More projects">
+      <a class="next card-surface" href="MTL.html"><small>Next project <i data-lucide="arrow-right"></i></small><span>Multi-Task Deep Learning for ISAC</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><span>© <span id="year">2026</span> Mikael Ade Krisna Respati</span><a href="index.html#projects">All projects</a></div>
+  </footer>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <script src="assets/js/script.js"></script>
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 
 </html>

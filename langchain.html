@@ -2,83 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LLM Agent for Personal Finance (Telegram Bot)</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moneysaurus Prototype — LangChain Finance Agent | Mikael Ade</title>
+  <meta name="description" content="The proof of concept behind Moneysaurus: a LangChain/LangGraph Telegram agent that logs expenses from chat and receipt photos.">
+  <meta property="og:title" content="Moneysaurus Prototype — LangChain Finance Agent">
+  <meta property="og:description" content="LangGraph agent with tool calling, memory, receipt images and PostgreSQL.">
+  <meta property="og:image" content="assets/images/AI-agent/agent.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='white'%3EMA%3C/text%3E%3C/svg%3E">
+  <script>(function () { var t; try { t = localStorage.getItem('theme'); } catch (e) { } if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; var r = document.documentElement; r.setAttribute('data-theme', t); r.classList.add('js'); })();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-nav">
+    <nav class="container" aria-label="Main">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">MA</span>Mikael Ade</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#projects" class="active">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme"><i data-lucide="moon" class="icon-moon"></i><i data-lucide="sun" class="icon-sun"></i></button>
+      <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><i data-lucide="menu"></i></button>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <section class="project-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html#projects">Projects</a><i data-lucide="chevron-right"></i><span>AI &amp; Agents</span></nav>
+      <h1>Moneysaurus Prototype — LangChain Finance Agent</h1>
+      <p class="project-lead">The proof of concept behind Moneysaurus: a Telegram bot where you log expenses and
+        income by chatting or sending a receipt photo, and an LLM agent extracts the amount, category and
+        description and stores them for you.</p>
+      <ul class="chips"><li class="chip">LangChain / LangGraph</li><li class="chip">Gemini 2.5 Flash</li><li class="chip">PostgreSQL</li><li class="chip">Telegram Bot API</li><li class="chip">n8n</li><li class="chip chip-muted">Proof of concept</li></ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/mikaelade00/Langchain_moneysaurus" target="_blank" rel="noopener"><i data-lucide="github"></i>View on GitHub</a>
+        <a class="btn" href="https://moneysaurus.id" target="_blank" rel="noopener"><i data-lucide="external-link"></i>See the live product</a>
+      </div>
+    </section>
+
+    <article class="prose card-surface reveal">
+      <div class="callout">
+        <p><strong>This is the prototype.</strong> The production version of Moneysaurus is a full platform with
+          web and mobile apps, WhatsApp and Telegram bots, and an AI financial advisor, live at
+          <a href="https://moneysaurus.id" target="_blank" rel="noopener">moneysaurus.id</a>.</p>
+      </div>
+
+      <h2>How it works</h2>
+      <p>A LangChain-based agent interprets what the user wants, pulls structured financial data out of the message,
+        and decides which tool to call. It handles both text and receipt images, so logging works however the user
+        prefers to send it.</p>
+
+      <h2>Key contributions</h2>
+      <ul>
+        <li>Designed the agent workflow in LangGraph to orchestrate financial reasoning and tool execution.</li>
+        <li>Integrated tool calling for creating, categorizing and saving transactions to the database.</li>
+        <li>Added short-term conversational memory to keep context across multi-turn chats.</li>
+        <li>Wrote prompts that reliably extract amount, category and description from messy input.</li>
+        <li>Combined text reasoning with receipt-image understanding for multimodal input.</li>
+      </ul>
+
+      <h2>Evolution: from n8n prototype to LangChain agent</h2>
+      <div class="callout">
+        <p>The first version was built as an <strong>n8n workflow</strong>: an AI agent node with Gemini 2.5 Flash
+          classified each message, extracted transaction details from text or images, and wrote them to a
+          structured PostgreSQL schema. It proved the idea and the chat-first experience.</p>
+      </div>
+      <p>Moving to LangChain/LangGraph in code gave full control over agent state, tool definitions and memory,
+        made the logic testable, and removed the dependency on a workflow runtime.</p>
+
+      <h2>Tech stack</h2>
+      <ul>
+        <li><strong>LangChain / LangGraph</strong> for agent orchestration and state management.</li>
+        <li><strong>Gemini 2.5 Flash</strong> as the reasoning and multimodal model.</li>
+        <li><strong>PostgreSQL</strong> for persistent transaction storage.</li>
+        <li><strong>Telegram Bot API</strong> as the chat interface.</li>
+      </ul>
+
+      <h2>From prototype to production</h2>
+      <p>The prototype proved that people will happily track money through chat. The production Moneysaurus
+        builds on that with:</p>
+      <ul>
+        <li>WhatsApp alongside Telegram, OCR receipt parsing and voice-to-text logging.</li>
+        <li>An AI financial advisor agent that calls tools over MCP.</li>
+        <li>Web, mobile and admin apps with wallets, budgets, goals, bill reminders and reports.</li>
+        <li>A production backend: FastAPI, PostgreSQL with pgvector, Celery/Redis workers and Xendit payments.</li>
+      </ul>
+    </article>
+
+    <h2 class="gallery-title">Figures</h2>
+    <div class="gallery single">
+      <figure class="figure card-surface"><button type="button" aria-label="Enlarge: n8n agent workflow"><img src="assets/images/AI-agent/agent.png" alt="n8n workflow connecting Telegram, the AI agent node, Gemini and PostgreSQL" loading="lazy" decoding="async"></button><figcaption>The original n8n agent workflow</figcaption></figure>
     </div>
 
-    <div class="content project-page">
-        <div class="section active" id="project-detail">
-            <h2>LLM Agent for Personal Finance</h2>
-            <div class="project-content">
-                <div class="box">
-                    <p>
-                        I developed an LLM-powered personal finance assistant integrated into Telegram, enabling
-                        users to log expenses and income through natural conversation.
-                        The core intelligence of the system is implemented using a LangChain-based agent, which
-                        interprets user intent, extracts structured financial information,
-                        and decides the appropriate action through tool invocation. The agent supports both text
-                        inputs and receipt images, allowing seamless multimodal interaction.
-                    </p>
+    <nav class="pager" aria-label="More projects">
+      <a class="card-surface" href="MTL.html"><small><i data-lucide="arrow-left"></i> Previous project</small><span>Multi-Task Deep Learning for ISAC</span></a>
+      <a class="next card-surface" href="latex_translator.html"><small>Next project <i data-lucide="arrow-right"></i></small><span>LaTeX Chunking &amp; Translation</span></a>
+    </nav>
+  </main>
 
-                    <h3>Key Contributions:</h3>
-                    <ul>
-                        <li>Designed and implemented a LangChain agent with structured reasoning flow for financial
-                            logging and querying.</li>
-                        <li>Integrated tool calling for actions such as transaction creation, categorization, and
-                            database insertion.</li>
-                        <li>Implemented short-term conversational memory to maintain context across multi-turn
-                            interactions.</li>
-                        <li>Developed robust prompt design to ensure consistent extraction of amount, category, and
-                            description from noisy user inputs.</li>
-                        <li>Enabled multimodal understanding by combining text-based reasoning with receipt image
-                            interpretation.</li>
-                    </ul>
-
-                    <h3>Technical Stack:</h3>
-                    <ul>
-                        <li>LangChain / LangGraph for agent orchestration and state management</li>
-                        <li>Gemini 2.5 Flash as the reasoning and multimodal LLM</li>
-                        <li>PostgreSQL for persistent transaction storage</li>
-                        <li>Telegram Bot API as the conversational interface</li>
-                    </ul>
-
-                    <h3>Outcome:</h3>
-                    <p>
-                        This project demonstrates my ability to design and implement a production-oriented LLM agent
-                        that goes beyond simple prompt-response patterns.
-                        It highlights my experience in agent reasoning, tool-based execution, memory handling, and
-                        real-world integration with databases and messaging platforms.
-                    </p>
-                    <p>GitHub: <a href="https://github.com/mikaelade00/Langchain_moneysaurus" target="_blank">Github
-                            Project</a></p>
-                </div>
-
-                <!-- <div class="project-image">
-                    <img src="assets/images/AI-agent/agent.png" alt="AI Agent Project Image">
-                    <p class="image-caption">AI Agent Reasoning & Execution Flow</p>
-                </div> -->
-
-                <p><a href="index.html#portfolio">Back to Portfolio</a></p>
-            </div>
-        </div>
-    </div>
-    <script src="assets/js/script.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
+  <footer class="site-footer">
+    <div class="container"><span>© <span id="year">2026</span> Mikael Ade Krisna Respati</span><a href="index.html#projects">All projects</a></div>
+  </footer>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
