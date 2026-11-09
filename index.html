@@ -2,194 +2,460 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mikael Ade | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mikael Ade | Machine Learning Researcher</title>
+  <meta name="description" content="Mikael Ade Krisna Respati — machine learning researcher working on deep learning for wireless systems, LLM agents and embedded hardware.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mikael Ade | Machine Learning Researcher">
+  <meta property="og:description" content="Deep learning for wireless systems, LLM agents and embedded hardware.">
+  <meta property="og:image" content="assets/images/profil/Mikael_Ade_Photo.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='white'%3EMA%3C/text%3E%3C/svg%3E">
+  <script>(function () { var t; try { t = localStorage.getItem('theme'); } catch (e) { } if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; var r = document.documentElement; r.setAttribute('data-theme', t); r.classList.add('js'); })();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <div class="background-blobs">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="sidebar">
-    <div class="profile-container">
-      <div class="profile-picture">
-        <img src="assets/images/profil/Mikael_Ade_Photo.jpg" alt="Mikael Ade Krisna Respati">
-      </div>
-      <div class="profile-shimmer"></div>
-    </div>
-
-    <div class="sidebar-header">
-      <h2>Mikael Ade</h2>
-      <p>Machine Learning Researcher</p>
-    </div>
-
-    <nav class="nav-links">
-      <button class="nav-button" data-section="about">
-        <i data-lucide="user"></i>
-        <span>About Me</span>
+  <header class="site-nav">
+    <nav class="container" aria-label="Main">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">MA</span>Mikael Ade</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme">
+        <i data-lucide="moon" class="icon-moon"></i><i data-lucide="sun" class="icon-sun"></i>
       </button>
-      <button class="nav-button" data-section="cv">
-        <i data-lucide="file-text"></i>
-        <span>Experience</span>
-      </button>
-      <button class="nav-button" data-section="portfolio">
-        <i data-lucide="briefcase"></i>
-        <span>Portfolio</span>
+      <button class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <i data-lucide="menu"></i>
       </button>
     </nav>
+  </header>
 
-    <div class="social-links">
-      <a href="mailto:mikaeladekrisna@gmail.com" title="Email"><i data-lucide="mail"></i></a>
-      <a href="https://www.linkedin.com/in/mikael-ade-krisna-respati6149a6117/" target="_blank" title="LinkedIn"><i
-          data-lucide="linkedin"></i></a>
-      <a href="https://github.com/mikaelade00" target="_blank" title="GitHub"><i data-lucide="github"></i></a>
-    </div>
-  </div>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <p class="status">Hardware Test Engineer at Friendcom · MSc AI &amp; Robotics, Sejong University</p>
+            <h1>Mikael Ade Krisna Respati</h1>
+            <p class="hero-role">Machine Learning Researcher — wireless AI, deep learning &amp; LLM agents</p>
+            <p class="hero-pitch">I build deep learning models for 6G beamforming and localization, LLM agents
+              that do real work, and the embedded hardware those systems run on.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects"><i data-lucide="layout-grid"></i>View projects</a>
+              <a class="btn" href="CV_Mikael.pdf" download><i data-lucide="download"></i>Download CV</a>
+            </div>
+            <div class="socials">
+              <a href="mailto:mikaeladekrisna@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+              <a href="https://www.linkedin.com/in/mikael-ade-krisna-respati-6149a6117/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+              <a href="https://github.com/mikaelade00" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <img src="assets/images/profil/Mikael_Ade_Photo.jpg" alt="Portrait of Mikael Ade" width="560" height="700" fetchpriority="high">
+          </div>
+        </div>
 
-  <div class="content">
+        <div class="stats card-surface" aria-label="Highlights">
+          <div class="stat">
+            <div class="stat-value">3</div>
+            <div class="stat-label">Journal publications</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">4.14<small style="font-size:.55em;color:var(--muted)">/4.5</small></div>
+            <div class="stat-label">MSc GPA</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">88%</div>
+            <div class="stat-label">Top-1 beam accuracy</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">−88%</div>
+            <div class="stat-label">Model parameters via adaptive CSI filter</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ABOUT -->
-    <div class="section" id="about">
-      <h2>About Me</h2>
-      <div class="box">
-        <p>Machine Learning Researcher with a strong background in machine learning, deep learning, and data-driven
-          system design.
-          Experienced in developing end-to-end AI pipelines, implementing neural network architectures (CNN, LSTM,
-          Transformer, Autoencoder),
-          and optimizing models for real-world deployment. Skilled in Python, TensorFlow, PyTorch, and data
-          preprocessing,
-          with hands-on experience integrating AI into practical applications such as prediction systems, intelligent
-          sensing, and embedded devices.
-          Passionate about building robust, scalable, and efficient AI solutions that drive automation and intelligent
-          decision-making across diverse domains.</p>
+    <section class="section" id="about">
+      <div class="container">
+        <span class="eyebrow">About</span>
+        <h2 class="section-title">Research that ships</h2>
+        <div class="about-grid">
+          <div class="about-text card-surface reveal">
+            <p>I'm a machine learning researcher with a background in electrical engineering. My master's work at
+              Sejong University focuses on multi-task deep learning for joint beamforming and localization in
+              massive MIMO systems, published in IEEE Access and the Journal of Communications and Networks.</p>
+            <p>Today I work as a hardware test engineer at Friendcom, testing smart energy meters and building
+              STM32 test tools for DLMS communication.</p>
+            <p>I enjoy taking models all the way to something usable: end-to-end pipelines, network architectures
+              (CNN, LSTM, Transformer, Autoencoder), LLM agents with tools and memory, and the PCBs and firmware
+              that put intelligence on real devices.</p>
+          </div>
+          <div class="focus-list card-surface reveal">
+            <h3>What I work on</h3>
+            <ul>
+              <li><i data-lucide="radio-tower"></i>Deep learning for ISAC, beamforming &amp; localization</li>
+              <li><i data-lucide="bot"></i>LLM agents, RAG and voice assistants</li>
+              <li><i data-lucide="cpu"></i>Embedded firmware (STM32, ESP32) &amp; PCB design</li>
+              <li><i data-lucide="gauge"></i>Smart energy meter testing (EMC, environmental, DLMS)</li>
+              <li><i data-lucide="activity"></i>Time-series prediction &amp; fault detection</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <span class="eyebrow">Experience</span>
+        <h2 class="section-title">Education &amp; work</h2>
+        <div class="timeline-cols">
+          <div>
+            <h3><i data-lucide="briefcase"></i>Work</h3>
+            <ol class="timeline">
+              <li class="timeline-item card-surface reveal">
+                <div class="timeline-head">
+                  <h4>PT. Friendcom Tech Indonesia</h4>
+                  <span class="date-chip">May 2026 – Present</span>
+                </div>
+                <div class="timeline-meta"><em>Hardware Test Engineer</em> · Bandung Barat, Indonesia</div>
+                <p>EMC and environmental testing of single- and three-phase energy meters and data concentrator units
+                  (DCUs). Developing an STM32-based mini meter simulator for DLMS communication testing.</p>
+              </li>
+              <li class="timeline-item card-surface reveal">
+                <div class="timeline-head">
+                  <h4>NTUST — Center for IoT Innovation</h4>
+                  <span class="date-chip">Jul 2023 – Nov 2023</span>
+                </div>
+                <div class="timeline-meta"><em>Research Assistant Intern</em> · Taipei, Taiwan</div>
+                <p>Built a fault prediction system for wind turbine generators with LSTM networks. Handled class
+                  imbalance with SMOTEENN and added an attention-based autoencoder, reaching MAE 1.36 and R² 0.9.</p>
+              </li>
+              <li class="timeline-item card-surface reveal">
+                <div class="timeline-head">
+                  <h4>PT. Lunar Inovasi Teknologi</h4>
+                  <span class="date-chip">Dec 2022 – May 2023</span>
+                </div>
+                <div class="timeline-meta"><em>Hardware Test Engineer</em> · Yogyakarta, Indonesia</div>
+                <p>Designed PCBs for power-monitoring ICs (ADE9153A, RN8902C) with an ESP32-S3 and OLED display for a
+                  smart power meter product, in Altium Designer.</p>
+              </li>
+              <li class="timeline-item card-surface reveal">
+                <div class="timeline-head">
+                  <h4>PT. Lunar Inovasi Teknologi</h4>
+                  <span class="date-chip">Sep 2022 – Nov 2022</span>
+                </div>
+                <div class="timeline-meta"><em>Intern</em> · Yogyakarta, Indonesia</div>
+                <p>Designed a power-monitoring minimum system board using RN8209C, V9021 and V9021S ICs.</p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3><i data-lucide="graduation-cap"></i>Education</h3>
+            <ol class="timeline">
+              <li class="timeline-item card-surface reveal">
+                <div class="timeline-head">
+                  <h4>Sejong University</h4>
+                  <span class="date-chip">Mar 2024 – Feb 2026</span>
+                </div>
+                <div class="timeline-meta"><em>MSc, AI and Robotics</em> · Seoul · GPA 4.14 / 4.50</div>
+                <p>Thesis: Joint Beamforming and Localization using Multi-Task Deep Learning — a CNN with soft
+                  parameter sharing, attention gates and an adaptive filter for CSI dimensionality reduction,
+                  trained end-to-end.</p>
+              </li>
+              <li class="timeline-item card-surface reveal">
+                <div class="timeline-head">
+                  <h4>Gadjah Mada University</h4>
+                  <span class="date-chip">Aug 2018 – Nov 2022</span>
+                </div>
+                <div class="timeline-meta"><em>BEng, Electrical Engineering</em> · Yogyakarta · GPA 3.20 / 4.00</div>
+                <p>Thesis: an NLP-based indirect mass reporting system on Twitter — an SVM classifier separating
+                  public-service complaints from other tweets in the Yogyakarta region.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="section" id="publications">
+      <div class="container">
+        <span class="eyebrow">Publications</span>
+        <h2 class="section-title">Peer-reviewed work</h2>
+        <ul class="pub-list">
+          <li class="pub card-surface reveal">
+            <div class="pub-venue">IEEE Access <span>2025</span></div>
+            <div>
+              <p class="pub-title">Multi-Task Deep Learning with Adaptive CSI Filtering for Joint Beamforming and Localization</p>
+              <p class="pub-journal">IEEE Access</p>
+            </div>
+            <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/11267407" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Paper</a>
+          </li>
+          <li class="pub card-surface reveal">
+            <div class="pub-venue">JCN <span>2025</span></div>
+            <div>
+              <p class="pub-title">CSI-Based Beamforming and Localization for Massive MIMO Using Deep Learning</p>
+              <p class="pub-journal">Journal of Communications and Networks</p>
+            </div>
+            <a class="btn" href="https://doi.org/10.23919/JCN.2025.000099" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Paper</a>
+          </li>
+          <li class="pub card-surface reveal">
+            <div class="pub-venue">IEEE Access <span>2024</span></div>
+            <div>
+              <p class="pub-title">A Survey on Machine Learning Enhanced Integrated Sensing and Communication Systems: Architectures, Algorithms, and Applications</p>
+              <p class="pub-journal">IEEE Access</p>
+            </div>
+            <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/10756650" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Paper</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <span class="eyebrow">Skills</span>
+        <h2 class="section-title">Toolbox</h2>
+        <div class="skills-grid">
+          <div class="skill-group card-surface reveal">
+            <h3><i data-lucide="brain"></i>Machine learning</h3>
+            <ul class="chips">
+              <li class="chip">PyTorch</li><li class="chip">TensorFlow</li><li class="chip">scikit-learn</li>
+              <li class="chip">CNN</li><li class="chip">LSTM</li><li class="chip">Transformer</li>
+              <li class="chip">Autoencoder</li><li class="chip">Attention</li><li class="chip">Multi-task learning</li>
+            </ul>
+          </div>
+          <div class="skill-group card-surface reveal">
+            <h3><i data-lucide="bot"></i>LLM &amp; agents</h3>
+            <ul class="chips">
+              <li class="chip">LangChain</li><li class="chip">LangGraph</li><li class="chip">RAG</li>
+              <li class="chip">FAISS</li><li class="chip">Ollama</li><li class="chip">Pipecat</li>
+              <li class="chip">n8n</li><li class="chip">Tool calling</li>
+            </ul>
+          </div>
+          <div class="skill-group card-surface reveal">
+            <h3><i data-lucide="code-2"></i>Software</h3>
+            <ul class="chips">
+              <li class="chip">Python</li><li class="chip">C / C++</li><li class="chip">TypeScript</li>
+              <li class="chip">MATLAB</li><li class="chip">FastAPI</li><li class="chip">Next.js</li>
+              <li class="chip">PostgreSQL</li><li class="chip">Docker</li>
+            </ul>
+          </div>
+          <div class="skill-group card-surface reveal">
+            <h3><i data-lucide="cpu"></i>Hardware</h3>
+            <ul class="chips">
+              <li class="chip">STM32</li><li class="chip">ESP32</li><li class="chip">Altium Designer</li>
+              <li class="chip">KiCad</li><li class="chip">Eagle</li><li class="chip">RS-485 / DLMS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cert card-surface reveal">
+          <p><strong>DeepLearning.AI TensorFlow Developer Specialization</strong><small>Coursera · 2021 · Languages: English, Bahasa Indonesia</small></p>
+          <a class="btn" href="https://www.coursera.org/account/accomplishments/specialization/certificate/PPUB5Z2GA2VG" target="_blank" rel="noopener"><i data-lucide="award"></i>View certificate</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <span class="eyebrow">Projects</span>
+        <h2 class="section-title">Selected work</h2>
+        <p class="section-intro">A live product I built, research with full write-ups, and other recent work.
+          Some repositories are private; those cards describe the work without a code link.</p>
+
+        <article class="featured card-surface reveal" aria-labelledby="featured-title">
+          <div class="featured-text">
+            <span class="featured-badge"><i data-lucide="sparkles"></i>Featured · Live product</span>
+            <h3 id="featured-title">Moneysaurus — AI Finance Platform</h3>
+            <p>A production personal-finance platform for Indonesian users. Log money by chatting on WhatsApp or
+              Telegram, snapping a receipt or sending a voice note, then manage it all in the web and mobile apps
+              with an AI financial advisor.</p>
+            <ul class="featured-points">
+              <li><i data-lucide="message-circle"></i>WhatsApp &amp; Telegram bots with OCR receipt parsing and voice-to-text logging</li>
+              <li><i data-lucide="bot"></i>AI advisor agent with tool calling over MCP</li>
+              <li><i data-lucide="wallet"></i>Wallets, budgets, goals, bill reminders, recurring transactions and reports</li>
+              <li><i data-lucide="server"></i>FastAPI, PostgreSQL + pgvector, Celery/Redis, Xendit payments, React web and Flutter mobile apps</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://moneysaurus.id" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Visit moneysaurus.id</a>
+              <a class="btn" href="langchain.html"><i data-lucide="flask-conical"></i>See the prototype</a>
+            </div>
+          </div>
+          <a class="featured-visual" href="https://moneysaurus.id" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <img src="assets/images/moneysaurus/mascot.webp" alt="" width="600" height="541" loading="lazy" decoding="async">
+          </a>
+        </article>
+
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="research" aria-pressed="false">Research</button>
+          <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false">AI &amp; Agents</button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web &amp; Apps</button>
+          <button class="filter-btn" type="button" data-filter="hardware" aria-pressed="false">Embedded &amp; Hardware</button>
+        </div>
+
+        <div class="project-grid">
+          <!-- Detailed projects -->
+          <a href="adaptive_filter.html" class="project-card card-surface" data-category="research">
+            <div class="project-thumb"><img src="assets/images/adaptive_filter/CNN_arch.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">Deep learning</li><li class="chip">mmWave MIMO</li><li class="chip chip-muted">IEEE Access 2025</li></ul>
+              <h3>Adaptive CSI Filtering for Beamforming &amp; Localization</h3>
+              <p>A multi-task CNN with a learnable CSI filter that cuts model parameters by up to 88% while hitting 88% top-1 beam accuracy.</p>
+              <span class="project-more">Read case study <i data-lucide="arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a href="MTL.html" class="project-card card-surface" data-category="research">
+            <div class="project-thumb"><img src="assets/images/MTL/CNN_structure.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">Multi-task learning</li><li class="chip">ISAC / 6G</li></ul>
+              <h3>Multi-Task Deep Learning for ISAC Beamforming &amp; Localization</h3>
+              <p>One CNN predicts the best beam and the user's position from CSI: 99.2% top-3 accuracy and 81% lower localization error.</p>
+              <span class="project-more">Read case study <i data-lucide="arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a href="langchain.html" class="project-card card-surface" data-category="ai">
+            <div class="project-thumb contain"><img src="assets/images/AI-agent/agent.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">LangGraph</li><li class="chip">Gemini</li><li class="chip">Telegram</li><li class="chip chip-muted">Proof of concept</li></ul>
+              <h3>Moneysaurus Prototype — LangChain Finance Agent</h3>
+              <p>Where Moneysaurus started: an n8n workflow, then a LangChain/LangGraph Telegram agent that logs expenses from chat and receipt photos.</p>
+              <span class="project-more">Read case study <i data-lucide="arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a href="latex_translator.html" class="project-card card-surface" data-category="ai">
+            <div class="project-thumb contain"><img src="assets/images/latex_chunking/workflow.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">Python</li><li class="chip">LLM</li><li class="chip">LaTeX</li></ul>
+              <h3>LaTeX Chunking &amp; Translation</h3>
+              <p>Splits LaTeX papers into sections, translates the prose with an LLM, and rebuilds a document that still compiles.</p>
+              <span class="project-more">Read case study <i data-lucide="arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a href="pcb_designs.html" class="project-card card-surface" data-category="hardware">
+            <div class="project-thumb"><img src="assets/images/PCB/ESP32_miniOLED_brd1.png" alt="" loading="lazy" decoding="async"></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">Altium</li><li class="chip">ESP32</li><li class="chip">Power metering</li></ul>
+              <h3>PCB Designs</h3>
+              <p>Boards for power-monitoring ICs (ADE9153A, RN8209C), an ESP32 mini OLED board, and a compact power supply.</p>
+              <span class="project-more">See the boards <i data-lucide="arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- 2026 projects -->
+
+          <article class="project-card card-surface" data-category="ai">
+            <div class="project-thumb icon-thumb"><i data-lucide="file-search"></i></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">RAG</li><li class="chip">FAISS</li><li class="chip">Ollama</li><li class="chip chip-muted">2026</li></ul>
+              <h3>Local PDF RAG</h3>
+              <p>Ask questions about your PDFs fully offline: FastAPI, sentence-transformer embeddings, a FAISS index and a small local LLM through Ollama.</p>
+              <div class="project-meta"><span class="project-links"><a href="https://github.com/mikaelade00/pdf-RAG" target="_blank" rel="noopener"><i data-lucide="github"></i>Code</a></span></div>
+            </div>
+          </article>
+
+          <article class="project-card card-surface" data-category="ai">
+            <div class="project-thumb icon-thumb"><i data-lucide="phone-call"></i></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">Voice AI</li><li class="chip">Pipecat</li><li class="chip">FastAPI</li><li class="chip chip-muted">2026</li></ul>
+              <h3>Indonesian Voice Customer-Service Agent</h3>
+              <p>Proof of concept for an inbound phone agent: streaming ASR → dialog agent with intents and tools → TTS, tuned to a 1.5 s time-to-first-audio budget.</p>
+              <div class="project-meta"><span class="private-note"><i data-lucide="lock"></i>Private repo</span></div>
+            </div>
+          </article>
+
+
+
+
+          <article class="project-card card-surface" data-category="web">
+            <div class="project-thumb icon-thumb"><i data-lucide="cctv"></i></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">FastAPI</li><li class="chip">MediaMTX</li><li class="chip">WebRTC</li><li class="chip chip-muted">2026</li></ul>
+              <h3>Local CCTV Dashboard</h3>
+              <p>Multi-camera monitoring that stays on the local network: RTSP streams relayed to the browser over WebRTC, with camera status from a small FastAPI app.</p>
+              <div class="project-meta"><span class="private-note"><i data-lucide="lock"></i>Private repo</span></div>
+            </div>
+          </article>
+
+
+
+          <article class="project-card card-surface" data-category="hardware">
+            <div class="project-thumb icon-thumb"><i data-lucide="zap"></i></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">STM32</li><li class="chip">HAL</li><li class="chip">Test automation</li><li class="chip chip-muted">2026</li></ul>
+              <h3>PSU Voltage-Dip Tester</h3>
+              <p>STM32F4 firmware for voltage-dip testing of power supplies: relay and transformer-tap control plus a phototransistor pulse counter, driven by serial commands.</p>
+              <div class="project-meta"><span class="private-note"><i data-lucide="lock"></i>Private repo</span></div>
+            </div>
+          </article>
+
+          <article class="project-card card-surface" data-category="hardware">
+            <div class="project-thumb icon-thumb"><i data-lucide="toggle-right"></i></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">STM32F411</li><li class="chip">UART</li><li class="chip chip-muted">2026</li></ul>
+              <h3>6-Channel Relay Controller</h3>
+              <p>Serial-command relay controller with non-blocking per-relay timers and a streaming status mode, written with STM32CubeIDE and HAL.</p>
+              <div class="project-meta"><span class="private-note"><i data-lucide="lock"></i>Private repo</span></div>
+            </div>
+          </article>
+
+          <article class="project-card card-surface" data-category="hardware">
+            <div class="project-thumb icon-thumb"><i data-lucide="wifi"></i></div>
+            <div class="project-body">
+              <ul class="chips"><li class="chip">ESP32-S3</li><li class="chip">PlatformIO</li><li class="chip">Web UI</li><li class="chip chip-muted">2026</li></ul>
+              <h3>ESP32 Meter Test Bench</h3>
+              <p>Two ESP32 tools for energy-meter testing: a relay power-cycle controller and a PF/QF pulse counter, each with a Wi-Fi web dashboard and serial control.</p>
+              <div class="project-meta"><span class="private-note"><i data-lucide="lock"></i>Private repos</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact card-surface reveal">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's work together</h2>
+          <p>Open to ML research and engineering roles, and to collaborations on wireless AI, LLM agents or embedded systems.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:mikaeladekrisna@gmail.com"><i data-lucide="mail"></i>mikaeladekrisna@gmail.com</a>
+            <a class="btn" href="https://www.linkedin.com/in/mikael-ade-krisna-respati-6149a6117/" target="_blank" rel="noopener"><i data-lucide="linkedin"></i>LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span id="year">2026</span> Mikael Ade Krisna Respati</span>
+      <a href="https://github.com/mikaelade00" target="_blank" rel="noopener">github.com/mikaelade00</a>
     </div>
+  </footer>
 
-    <!-- CV -->
-    <div class="section" id="cv">
-      <h2>Curriculum Vitae</h2>
-
-      <div class="cv-box">
-        <h3><i data-lucide="graduation-cap"></i> Education</h3>
-        <p><strong>Sejong University</strong>, Seoul, South Korea <span class="date">Mar 2024 – Feb 2026
-            (Expected)</span><br>
-          Master’s in AI and Robotics, GPA: 4.14 / 4.50.<br>
-          <em>Thesis: Joint Beamforming and Localization using Multi-Task Deep Learning</em><br>
-          Developed a CNN-based model using a soft parameter sharing approach with attention gates and designed an
-          adaptive filter for CSI dimensionality reduction, trained end-to-end with the model.
-        </p>
-
-        <p><strong>Gadjah Mada University</strong>, Yogyakarta, Indonesia <span class="date">Aug 2018 – Nov
-            2022</span><br>
-          Bachelor of Electrical Engineering, GPA: 3.20 / 4.00.<br>
-          <em>Thesis: Development of Indirect Mass Reporting System through Twitter Based on NLP</em><br>
-          Developed an SVM-based ML model to classify tweets as public service complaints or non-complaints in the
-          Yogyakarta region.
-        </p>
-      </div>
-
-      <div class="cv-box">
-        <h3><i data-lucide="briefcase"></i> Experience</h3>
-        <p><strong>National Taiwan University of Science and Technology (NTUST)</strong>, Taipei, Taiwan <span
-            class="date">Jul 2023 – Nov 2023</span><br>
-          <em>Research Assistant Intern, Center for IoT Innovation (CITI)</em><br>
-          Developed a Fault Prediction System for Wind Turbine Generators using LSTM networks in Python (TensorFlow,
-          scikit-learn). Addressed data imbalance with SMOTEEN and implemented an Autoencoder with Attention layers,
-          achieving MAE = 1.36 and R² = 0.9.
-        </p>
-
-        <p><strong>PT. Lunar Inovasi Teknologi</strong>, Yogyakarta, Indonesia <span class="date">Dec 2022 – May
-            2023</span><br>
-          <em>Hardware Test Engineer</em><br>
-          Designed and developed PCBs for power monitoring ICs (ADE9153A and RN8902C) integrated with an ESP32-S3
-          microcontroller and OLED display to create a Smart Power Metering product using Altium Designer.
-        </p>
-
-        <p><strong>PT. Lunar Inovasi Teknologi</strong>, Yogyakarta, Indonesia <span class="date">Sep 2022 – Nov
-            2022</span><br>
-          <em>Internship Program</em><br>
-          Designed and developed a power monitoring minimum system board utilizing RN8209C, V9021, and V9021S ICs using
-          Altium Designer.
-        </p>
-      </div>
-
-      <div class="cv-box">
-        <h3><i data-lucide="book-open"></i> Publications</h3>
-        <p><strong>Journal of Communications and Networks (2025):</strong> <em>CSI-Based Beamforming and Localization
-            for Massive MIMO Using Deep Learning.</em></p>
-        <p><strong>IEEE Access (2025):</strong> <em>Multi-Task Deep Learning with Adaptive CSI Filtering for Joint
-            Beamforming and Localization.</em></p>
-        <p><strong>IEEE Access (2024):</strong> <em>A Survey on Machine Learning Enhanced Integrated Sensing and
-            Communication Systems: Architectures, Algorithms, and Applications.</em></p>
-      </div>
-
-      <div class="cv-box">
-        <h3><i data-lucide="code"></i> Skills & Certifications</h3>
-        <p><strong>Technical:</strong> Python, C/C++, MATLAB, CNN, LSTM, Autoencoder, Attention Mechanism, AI Agents,
-          ESP32, PCB Design (Altium, Eagle), Microcontrollers.</p>
-        <p><strong>Certificates:</strong> <strong>DeepLearning.AI TensorFlow Developer Specialization
-            (2021)</strong><br>
-          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PPUB5Z2GA2VG"
-            target="_blank">View Certificate</a>
-        </p>
-        <p><strong>Languages:</strong> English, Bahasa Indonesia</p>
-      </div>
-    </div>
-
-    <!-- PORTFOLIO -->
-    <div class="section" id="portfolio">
-      <h2>Portfolio</h2>
-
-      <div class="grid">
-
-        <a href="langchain.html" class="card">
-          <h3>LLM Agent for Personal Finance (Telegram Bot)</h3>
-          <p>Designed a LangChain-based LLM agent with tool calling, conversational memory, and PostgreSQL integration
-            for finance tracking.</p>
-        </a>
-
-        <a href="adaptive_filter.html" class="card">
-          <h3>Adaptive CSI-Based Beamforming & Localization Model</h3>
-          <p>Developed a deep learning framework for beamforming prediction and user localization from high-dimensional
-            CSI in mmWave MIMO systems.</p>
-        </a>
-
-        <a href="MTL.html" class="card">
-          <h3>Multitask Deep Learning for ISAC-Based Beamforming & Localization</h3>
-          <p>Developed a multitask deep learning model for beamforming selection and user localization using CSI.</p>
-        </a>
-
-        <a href="AI-agent.html" class="card">
-          <h3>Personal Finance Tracking Telegram Bot</h3>
-          <p>Developed a Telegram bot for personal finance tracking using AI agents and PostgreSQL.</p>
-        </a>
-
-        <a href="latex_translator.html" class="card">
-          <h3>LaTeX Chunking & Translation</h3>
-          <p>Created a Python-based pipeline for chunking, translating, and reconstructing LaTeX documents using LLMs.
-          </p>
-        </a>
-
-        <a href="pcb_designs.html" class="card">
-          <h3>PCB Designs</h3>
-          <p>Collection of PCB designs for various projects, including power monitoring ICs and microcontrollers.</p>
-        </a>
-      </div>
-    </div>
-
-  </div>
-
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <script src="assets/js/script.js"></script>
-
 </body>
 
 </html>
