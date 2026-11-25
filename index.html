@@ -98,7 +98,8 @@
               Sejong University focuses on multi-task deep learning for joint beamforming and localization in
               massive MIMO systems, published in IEEE Access and the Journal of Communications and Networks.</p>
             <p>Today I work as a hardware test engineer at Friendcom, testing smart energy meters and building
-              STM32 test tools for DLMS communication.</p>
+              STM32 test tools for DLMS communication. I also work freelance as an AI engineer at Technosaurus, on
+              Bahasa Indonesia voice agents and the Moneysaurus finance platform.</p>
             <p>I enjoy taking models all the way to something usable: end-to-end pipelines, network architectures
               (CNN, LSTM, Transformer, Autoencoder), LLM agents with tools and memory, and the PCBs and firmware
               that put intelligence on real devices.</p>
@@ -134,6 +135,17 @@
                 <div class="timeline-meta"><em>Hardware Test Engineer</em> · Bandung Barat, Indonesia</div>
                 <p>EMC and environmental testing of single- and three-phase energy meters and data concentrator units
                   (DCUs). Developing an STM32-based mini meter simulator for DLMS communication testing.</p>
+              </li>
+              <li class="timeline-item card-surface reveal">
+                <div class="timeline-head">
+                  <h4>Technosaurus</h4>
+                  <span class="date-chip">Jan 2026 – Present</span>
+                </div>
+                <div class="timeline-meta"><em>AI Engineer (Freelance)</em> · Remote</div>
+                <p>Built the voice agent proof of concept on Pipecat with its evaluation harness and latency
+                  benchmark, and the Indonesian text normalization for text-to-speech. On Moneysaurus, built the
+                  first Telegram integration, voice entry and LLM-assisted Excel import, and extended the shared
+                  office book with MCP tools for the chat agent.</p>
               </li>
               <li class="timeline-item card-surface reveal">
                 <div class="timeline-head">
@@ -275,7 +287,7 @@
       <div class="container">
         <span class="eyebrow">Projects</span>
         <h2 class="section-title">Selected work</h2>
-        <p class="section-intro">A live product I built, research with full write-ups, and other recent work.
+        <p class="section-intro">A live product I work on, research with full write-ups, and other recent work.
           Some repositories are private; those cards describe the work without a code link.</p>
 
         <article class="featured card-surface reveal" aria-labelledby="featured-title">
@@ -284,12 +296,14 @@
             <h3 id="featured-title">Moneysaurus — AI Finance Platform</h3>
             <p>A production personal-finance platform for Indonesian users. Log money by chatting on WhatsApp or
               Telegram, snapping a receipt or sending a voice note, then manage it all in the web and mobile apps
-              with an AI financial advisor.</p>
+              with an AI financial advisor. I work on it as an AI engineer in a small team at Technosaurus.</p>
+            <p><strong>My part:</strong></p>
             <ul class="featured-points">
-              <li><i data-lucide="message-circle"></i>WhatsApp &amp; Telegram bots with OCR receipt parsing and voice-to-text logging</li>
-              <li><i data-lucide="bot"></i>AI advisor agent with tool calling over MCP</li>
-              <li><i data-lucide="wallet"></i>Wallets, budgets, goals, bill reminders, recurring transactions and reports</li>
-              <li><i data-lucide="server"></i>FastAPI, PostgreSQL + pgvector, Celery/Redis, Xendit payments, React web and Flutter mobile apps</li>
+              <li><i data-lucide="send"></i>The first Telegram bot integration, with account linking and live verification over SSE and Redis</li>
+              <li><i data-lucide="mic"></i>Voice transaction entry: speech-to-text, then LLM parsing into transactions</li>
+              <li><i data-lucide="file-spreadsheet"></i>Excel/CSV import with LLM column and category mapping</li>
+              <li><i data-lucide="building-2"></i>The shared office book: role hierarchy, activity history, Excel/PDF export, and MCP tools that let the chat agent read and edit it under per-role permissions</li>
+              <li><i data-lucide="server"></i>Stack: FastAPI, PostgreSQL, Celery/Redis, React</li>
             </ul>
             <div class="hero-actions">
               <a class="btn btn-primary" href="https://moneysaurus.id" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Visit moneysaurus.id</a>
@@ -378,7 +392,7 @@
             <div class="project-body">
               <ul class="chips"><li class="chip">Voice AI</li><li class="chip">Pipecat</li><li class="chip">FastAPI</li><li class="chip chip-muted">2026</li></ul>
               <h3>Indonesian Voice Customer-Service Agent</h3>
-              <p>Proof of concept for an inbound phone agent: streaming ASR → dialog agent with intents and tools → TTS, tuned to a 1.5 s time-to-first-audio budget.</p>
+              <p>Proof of concept for an inbound customer-service voice agent at Technosaurus: Silero VAD → speech-to-text → BM25 knowledge search and one streamed LLM round with tools → text-to-speech by clause. An evaluation harness (45 labeled questions, refusal gates) and a per-stage latency benchmark show where each turn spends its time.</p>
               <div class="project-meta"><span class="private-note"><i data-lucide="lock"></i>Private repo</span></div>
             </div>
           </article>
